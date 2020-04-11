@@ -1,0 +1,64 @@
+public function term_process(){
+		$j = $this->CosimModel->list_penelitian_seluruh();
+		$time = microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"];
+    	echo "Process Time1: {$time}";
+		$this->db->query("TRUNCATE table sc_tfidf");
+		$time = microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"];
+    	echo "Process Time12: {$time}";
+		set_time_limit(300);
+		
+		foreach($j as $j){
+			$title = $j->judul;
+			$docid = $j->no;
+			
+			$token = $this->preprocess->Text($title);
+			$stop_word = array();
+			foreach ($token as $t){
+				$term 	= $this->porter->Stem($t);
+			//	$jumlah = 0;
+				if (in_array($term,array_column($stop_word, 'term'))) {
+					foreach($stop_word as $k => $v){
+						if ($v['term'] == $term) {
+							$stop_word[$k]['jumlah'] ++;
+						}
+					}
+					/*$this->alpha_model->update_term($docid,$term,$s['jumlah']);*/
+				} else {
+					$s['term'] 	= $term;
+					$s['docid']	= $docid;
+					$s['jumlah'] = 1;
+					/*$this->alpha_model->insert_term($s);*/
+
+					array_push($stop_word,$s);
+				}
+			}
+			echo "<pre>";print_r($stop_word);echo "</pre>";
+			$this->alpha_model->insert_batch_term($stop_word);
+			echo $this->db->last_query();
+			
+		}
+		//echo "<pre>";print_r($stop_word);echo "</pre>";
+		//$this->CosimModel->insert_batch_term($stop_word);
+		
+		$time = microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"];
+    	echo "Process Time2: {$time}";
+		$N = $this->CosimModel->jumlah_doc();
+		$all = $this->CosimModel->titleTermSelectD();
+		echo $this->db->last_query();
+		$idfUpdate = array();
+		foreach ($all as $all) {
+			$term 	= $all->term;
+			$setdf 	= $all->df;
+			$idf =  (log(round($N/$setdf,3),10)) + 1;
+			$d['term'] = $term;
+			$d['idf'] = round($idf,3);
+			
+			array_push($idfUpdate,$d);
+			/*echo "$term ".round($idf_round,3,PHP_ROUND_HALF_DOWN)."<br>";*/
+		}
+		echo $this->CosimModel->update_batch_idf($idfUpdate);
+
+		$time = microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"];
+    	echo "Process Time3: {$time}";
+
+	}

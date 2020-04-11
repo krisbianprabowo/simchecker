@@ -1,0 +1,68 @@
+public function theoryTermProc(){
+		header('Content-Type: text/html; charset=utf-8');
+		$pdf = $this->CosimModel->theoryFileSelect();
+		$time = microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"];
+    	echo "Process Time1: {$time}";
+		$this->db->query("TRUNCATE table sc_theory_tfidf");
+
+		$time = microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"];
+    	echo "Process Time12: {$time}";
+		set_time_limit(300);
+		foreach($pdf as $pdf){
+
+			$title 	= $pdf->id_title;
+			$docid 	= $pdf->id_theory;
+			$Cpdf 	= $this->pdf2text->startConvert($pdf->theory_file);
+			$token	= $this->preprocess->Text($Cpdf);
+			$stop_word = array();
+			foreach ($token as $t){
+				
+				$term 	= $this->porter->Stem($t);
+			//	$term 	= stopWords($term);
+			//	$term 	= utf8_encode($term);
+				if (in_array($term,array_column($stop_word, 'term'))) {
+					foreach($stop_word as $k => $v){
+						if ($v['term'] == $term) {
+							$stop_word[$k]['jumlah'] ++;
+						}
+					}
+					/*$this->CosimModel->update_term($docid,$term,$s['jumlah']);*/
+				} else {
+					$s['term'] 		= $term;
+					$s['id_theory']	= $docid;
+					$s['jumlah'] 	= 1;
+					/*$this->CosimModel->insert_term($s);*/
+
+					array_push($stop_word,$s);
+				}
+		//		echo $term." ";
+				
+			}
+		//	echo "<pre>";print_r($stop_word);echo "</pre>";
+			$this->CosimModel->theoryTermInsertB($stop_word);
+		//	echo $this->db->last_query();
+		
+		}
+
+		$time = microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"];
+    	echo "Process Time2: {$time}";
+		$N = $this->CosimModel->theoryTotalFile();
+		$all = $this->CosimModel->theoryTermSelectD();
+	//	echo $this->db->last_query();
+		$idfUpdate = array();
+		foreach ($all as $all) {
+			$term 	= $all->term;
+			$setdf 	= $all->df;
+			echo "{$setdf}{$term}<br>";
+			$idf =  (log(round($N/ (1 + $setdf),4),10)) + 1;
+			$d['term'] = $term;
+			$d['idf'] = round($idf,4);
+			
+			array_push($idfUpdate,$d);
+			/*echo "$term ".round($idf_round,3,PHP_ROUND_HALF_DOWN)."<br>";*/
+		}
+		echo $this->CosimModel->theoryIdfUpdateB($idfUpdate);
+
+		$time = microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"];
+    	echo "Process Time3: {$time}";
+	}
