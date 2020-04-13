@@ -42,6 +42,9 @@
 		<!--begin::Global Theme Styles(used by all pages) -->
 		<link href="<?php echo asset_url()?>/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/vendors/custom/vendors/line-awesome/css/line-awesome.css" rel="stylesheet" type="text/css" />
+		<link href="https://localhost/simchecker/assets//vendors/custom/vendors/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
+		<link href="https://localhost/simchecker/assets//vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
+		<link href="https://localhost/simchecker/assets//vendors/custom/vendors/fontawesome5/css/all.min.css" rel="stylesheet" type="text/css" />
 		<link href="<?php echo asset_url()?>/vendors/custom/login-custom.css" rel="stylesheet" type="text/css" />
 		<!--end::Global Theme Styles -->
 
@@ -92,7 +95,7 @@
 						<!--begin::Head-->
 						<div class="kt-login__head">
 							
-							<a href="#" class="kt-link kt-login__signup-link">Back to Home <i class="la la-undo"></i></a>
+							<a href="<?php echo site_url('SimCheck')?>" class="kt-link kt-login__signup-link text-primary h6">Back to Home <i class="fa fa-home"></i></a>
 						</div>
 
 						<!--end::Head-->
@@ -150,7 +153,7 @@
 								<!--begin::Options-->
 								<div class="row">
 									<div class="col-3"></div>
-									<div class="col-auto kt-margin-l-45">
+									<div class="col-auto logo-position">
 										<a href="#" class="kt-login__logo">
 										<img src="<?php echo asset_url()?>/media/logos/logouadmin.png">
 									</a>

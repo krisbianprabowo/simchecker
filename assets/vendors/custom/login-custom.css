@@ -1,28 +1,31 @@
-html {
-  box-sizing: border-box;
+.logo-position {
+    margin-left: 45px !important;
 }
-*,*::before,*::after {
-  box-sizing: inherit;
+
+@media (max-width: 767px) {
+  /* line 113, C:/Users/SPN Graphics/Desktop/CL September/Edu mark/207 Education/HTML/scss/_header.scss */
+  .logo-position {
+    margin-left: 10px !important;
+  }
 }
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 113, C:/Users/SPN Graphics/Desktop/CL September/Edu mark/207 Education/HTML/scss/_header.scss */
+  .logo-position {
+    margin-left: 15px !important;
+  }
 }
-.wave-container {
-  position: relative;
-  background: #4C1B9B;
-  color: #FFF;
-  text-align: center;
-  overflow: hidden;
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  /* line 94, C:/Users/SPN Graphics/Desktop/CL September/Edu mark/207 Education/HTML/scss/_header.scss */
+  .logo-position {
+    margin-left: 40px !important;
+  }
 }
-.wave-container > svg {
-  display: block;
-}
-h1 {
-  font-size: 5rem;
-  margin: 7rem 1.25rem 2.5rem 1.25rem;
-}
-p {
-  font-size: 1.5rem;
-  margin: 0 1.25rem 5rem 1.25rem;
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  /* line 94, C:/Users/SPN Graphics/Desktop/CL September/Edu mark/207 Education/HTML/scss/_header.scss */
+  .logo-position {
+    margin-left: 45px !important;
+  }
 }
