@@ -19,6 +19,10 @@ class SimCheck extends CI_Controller {
 	}
 
 	public function index(){
+		$this->load->view('dashboard/sim/_landing-page.php');
+	}
+
+	public function dashboard(){
 		$d['body'] = 'dashboard/sim/_dashboard.php';
 		$this->load->view('dashboard/dtemplate.php', $d);
 	}
@@ -92,6 +96,10 @@ class SimCheck extends CI_Controller {
         redirect('SimCheck/login?logout=success');
 	}
 	
+	public function test(){
+		$this->load->view('dashboard/sim/-test.php');
+	}
+
 	public function simcheck_theory(){
 
 		$d['body'] = 'dashboard/sim/_similarity-theory.php'; 
