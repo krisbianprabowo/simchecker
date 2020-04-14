@@ -119,12 +119,15 @@
 								<!--end: Quick actions -->
 
 								<!--begin: User bar -->
+								
 								<div class="kt-header__topbar-item kt-header__topbar-item--user">
+									<?php if (isset($_SESSION['logged_in'])) {?>
 									<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
-										<span class="kt-header__topbar-welcome kt-visible-desktop">Hi,</span>
-										<span class="kt-header__topbar-username kt-visible-desktop">Krisbiantoro Prabowo</span>
-										<img alt="Pic" src="<?php echo asset_url()?>media/users/300_21.jpg" />
-
+										
+											<span class="kt-header__topbar-welcome kt-visible-desktop">Hi,</span>
+											<span class="kt-header__topbar-username kt-visible-desktop"><?php echo $_SESSION['id_admin']?></span>
+											<img alt="Pic" src="<?php echo asset_url()?>media/users/300_21.jpg" />
+										
 										<!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
 										<span class="kt-badge kt-badge--username kt-badge--unified-success kt-badge--lg kt-badge--rounded kt-badge--bold kt-hidden">S</span>
 									</div>
@@ -139,7 +142,7 @@
 												<span class="kt-badge kt-badge--username kt-badge--unified-success kt-badge--lg kt-badge--rounded kt-badge--bold kt-hidden">S</span>
 											</div>
 											<div class="kt-user-card__name">
-												Krisbiantoro Prabowo
+												<?php echo $_SESSION['id_admin']?>
 											</div>
 											<div class="kt-user-card__badge">
 												<span class="btn btn-label-primary btn-sm btn-bold btn-font-md">Mahasiswa</span>
@@ -170,6 +173,10 @@
 
 										<!--end: Navigation -->
 									</div>
+									<?php }else{ ?>
+										<a href="<?php echo site_url('SimCheck/login')?>" class="kt-header__topbar-username kt-visible-desktop">You're not logged in yet, Login Now</span>
+											
+										<?php } ?>
 								</div>
 
 								<!--end: User bar -->

@@ -851,7 +851,7 @@ h3 {
 
 /* line 15, C:/Users/SPN Graphics/Desktop/CL September/Edu mark/207 Education/HTML/scss/_header.scss */
 .header-area .main-header-area {
-  padding: 0 150px;
+  padding: 0 100px;
 }
 
 @media (max-width: 767px) {
@@ -871,7 +871,7 @@ h3 {
 @media (min-width: 992px) and (max-width: 1200px) {
   /* line 15, C:/Users/SPN Graphics/Desktop/CL September/Edu mark/207 Education/HTML/scss/_header.scss */
   .header-area .main-header-area {
-    padding: 0 150px;
+    padding: 0 100px;
   }
 }
 
@@ -1246,11 +1246,27 @@ h3 {
   padding-right: 7px;
 }
 
-/* line 1, C:/Users/SPN Graphics/Desktop/CL September/Edu mark/207 Education/HTML/scss/_slider.scss */
 .slider_bg_1 {
   background-image: url(banner1.png);
   background-size: auto;
 }
+
+@media (max-width: 767px) {
+  .slider_bg_1 {
+  background-image: url(banner.png);
+  background-size: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  /* line 244, C:/Users/SPN Graphics/Desktop/CL September/Edu mark/207 Education/HTML/scss/_header.scss */
+  .slider_bg_1 {
+  background-image: url(banner2.png);
+  background-size: auto;
+  }
+}
+/* line 1, C:/Users/SPN Graphics/Desktop/CL September/Edu mark/207 Education/HTML/scss/_slider.scss */
+
 
 /* line 5, C:/Users/SPN Graphics/Desktop/CL September/Edu mark/207 Education/HTML/scss/_slider.scss */
 .slider_area .single_slider {

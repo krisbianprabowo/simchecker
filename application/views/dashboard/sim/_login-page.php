@@ -15,14 +15,14 @@
 		<!--begin::Fonts -->
 		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
 		<script>
-			WebFont.load({
-				google: {
-					"families": ["Poppins:300,400,500,600,700", "Roboto:300,400,500,600,700"]
-				},
-				active: function() {
-					sessionStorage.fonts = true;
-				}
-			});
+		    WebFont.load({
+		        google: {
+		            "families": ["Poppins:300,400,500,600,700"]
+		        },
+		        active: function() {
+		            sessionStorage.fonts = true;
+		        }
+		    });
 		</script>
 
 		<!--end::Fonts -->
@@ -30,7 +30,7 @@
 		<!--begin::Page Custom Styles(used by this page) -->
 		<link href="<?php echo asset_url()?>/app/custom/login/login-v1.default.css" rel="stylesheet" type="text/css" />
 		<link href="<?php echo asset_url()?>/vendors/general/sweetalert2/dist/sweetalert2.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/vendors/general/animate.css/animate.css" rel="stylesheet" type="text/css" />
+		<link href="<?php echo asset_url()?>/vendors/general/animate.css/animate.css" rel="stylesheet" type="text/css" />
 
 		<!--end::Page Custom Styles -->
 
@@ -278,7 +278,7 @@
 		<script src="<?php echo asset_url()?>/app/custom/login/login-v1.js" type="text/javascript"></script>
 		<script src="<?php echo asset_url()?>/app/custom/general/components/extended/sweetalert2.js" type="text/javascript"></script>
 		<!--end::Page Scripts -->
-		<?php if (!empty($_GET['logout'])){
+		<!-- <?php if (!empty($_GET['logout'])){
 			if ($_GET['logout']=='success' and !empty($_SESSION['outlog'])){ ?>
 				<script>
 				$(document).ready(function () {
@@ -286,7 +286,7 @@
 				});
 				</script>
 		<?php }
-		}?>
+		}?> -->
 		<!--begin::Global App Bundle(used by all pages) -->
 		<script src="<?php echo asset_url()?>/app/bundle/app.bundle.js" type="text/javascript"></script>
 		

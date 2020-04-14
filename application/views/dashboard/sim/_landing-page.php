@@ -23,9 +23,11 @@
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
-    <link href="<?php echo asset_url()?>/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
+    
     <link rel="stylesheet" href="<?php echo asset_url()?>/demo/default/base/slicknav.css">
     <link rel="stylesheet" href="<?php echo asset_url()?>/demo/default/base/style.css">
+    <link href="<?php echo asset_url()?>/vendors/general/sweetalert2/dist/sweetalert2.css" rel="stylesheet" type="text/css" />
+    <link href="<?php echo asset_url()?>/demo/default/base/style.bundle.min.css" rel="stylesheet" type="text/css" />
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
@@ -85,7 +87,6 @@
                             <div class="log_chat_area d-flex">
                                 <div class="live_chat_btn">
                                     <a class="boxed_btn_orange" href="<?php echo site_url('SimCheck/login')?>">
-                                        <i class="fa fa-phone"></i>
                                         <span style="font-family: Poppins, sans-serif;">LOGIN</span>
                                     </a>
                                 </div>
@@ -125,9 +126,20 @@
     </div>
     <!-- slider_area_end -->
     <!-- form itself end -->
+    <script src="<?php echo asset_url()?>/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
+    <script src="<?php echo asset_url()?>/vendors/custom/components/vendors/sweetalert2/init.js" type="text/javascript"></script>
     <script src="<?php echo asset_url()?>/vendors/general/jquery/dist/jquery.js" type="text/javascript"></script>
     <script src="<?php echo asset_url()?>/vendors/general/jquery/dist/jquery.slicknav.min.js" type="text/javascript"></script>
     <script src="<?php echo asset_url()?>/vendors/general/jquery/dist/main.js" type="text/javascript"></script>
+    <?php if (!empty($_GET['logout'])){
+            if ($_GET['logout']=='success' and !empty($_SESSION['outlog'])){ ?>
+                <script>
+                $(document).ready(function () {
+                    swal.fire({ title: "Logout Successful", text: "You are already logout!",imageUrl: '<?php echo asset_url()?>/media/logos/lock.gif',imageWidth: 300,imageHeight: 200,showConfirmButton: true, timer:1100 });
+                });
+                </script>
+        <?php }
+        }?>
 </body>
 
 </html>

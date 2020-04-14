@@ -69,13 +69,13 @@ class SimCheck extends CI_Controller {
 			$passwordhash	= $akun->password;
 			$verify = verifyHashedPassword($password,$passwordhash);
 			if($verify == TRUE){
-				/*$data_session = array(	'level' => 'admin',
-										'id_admin'=>$akun->id,
-										'username'=>$akun->username,
-										'nama'=>$akun->nama,
+				$data_session = array(	'level' => 'admin',
+										'id_admin'=>$akun->id_user,
+										/*'username'=>$akun->username,
+										'nama'=>$akun->nama,*/
 										'logged_in' => TRUE
 										);
-				$this->session->set_userdata($data_session);*/
+				$this->session->set_userdata($data_session);
 			echo "success";
 			}else {
 				echo "failed";
@@ -93,7 +93,7 @@ class SimCheck extends CI_Controller {
 	}
 	public function redirect_logout(){
 		$this->session->set_flashdata('outlog','1');
-        redirect('SimCheck/login?logout=success');
+        redirect('SimCheck?logout=success');
 	}
 	
 	public function test(){
