@@ -135,7 +135,7 @@
             if ($_GET['logout']=='success' and !empty($_SESSION['outlog'])){ ?>
                 <script>
                 $(document).ready(function () {
-                    swal.fire({ title: "Logout Successful", text: "You are already logout!",imageUrl: '<?php echo asset_url()?>/media/logos/lock.gif',imageWidth: 300,imageHeight: 200,showConfirmButton: true, timer:1100 });
+                    swal.fire({ title: "Logout Successful!", text: "You are already logout!",imageUrl: '<?php echo asset_url()?>/media/logos/lock.gif',imageWidth: 300,imageHeight: 200,showConfirmButton: true, timer:1100 });
                 });
                 </script>
         <?php }
