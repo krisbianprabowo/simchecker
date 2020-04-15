@@ -125,8 +125,8 @@
 									<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
 										
 											<span class="kt-header__topbar-welcome kt-visible-desktop">Hi,</span>
-											<span class="kt-header__topbar-username kt-visible-desktop"><?php echo $_SESSION['id_admin']?></span>
-											<img alt="Pic" src="<?php echo asset_url()?>media/users/300_21.jpg" />
+											<span class="kt-header__topbar-username kt-visible-desktop"><?php echo $_SESSION['id_user']?></span>
+											<img alt="Pic" src="<?php echo asset_url().$_SESSION['photo_user']?>" />
 										
 										<!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
 										<span class="kt-badge kt-badge--username kt-badge--unified-success kt-badge--lg kt-badge--rounded kt-badge--bold kt-hidden">S</span>
@@ -136,13 +136,13 @@
 										<!--begin: Head -->
 										<div class="kt-user-card kt-user-card--skin-light kt-notification-item-padding-x">
 											<div class="kt-user-card__avatar">
-												<img class="kt-hidden-" alt="Pic" src="<?php echo asset_url()?>media/users/300_25.jpg" />
+												<img class="kt-hidden-" alt="Pic" src="<?php echo asset_url().$_SESSION['photo_user']?>" />
 
 												<!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
 												<span class="kt-badge kt-badge--username kt-badge--unified-success kt-badge--lg kt-badge--rounded kt-badge--bold kt-hidden">S</span>
 											</div>
 											<div class="kt-user-card__name">
-												<?php echo $_SESSION['id_admin']?>
+												<?php echo $_SESSION['id_user']?>
 											</div>
 											<div class="kt-user-card__badge">
 												<span class="btn btn-label-primary btn-sm btn-bold btn-font-md">Mahasiswa</span>

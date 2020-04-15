@@ -61,16 +61,17 @@ class SimCheck extends CI_Controller {
 	}*/
 
 	public function proses_login(){
-		$username 	= $this->input->post('username',true);
+		$id_user 	= $this->input->post('username',true);
 		$password 	= $this->input->post('password',true);
-		$akun = $this->system_model->check_user($username);
+		$akun = $this->system_model->check_user($id_user);
 		
 		if (!empty($akun)){
 			$passwordhash	= $akun->password;
 			$verify = verifyHashedPassword($password,$passwordhash);
 			if($verify == TRUE){
 				$data_session = array(	'level' => 'admin',
-										'id_admin'=>$akun->id_user,
+										'id_user'=>$akun->id_user,
+										'photo_user'=>$akun->photo,
 										/*'username'=>$akun->username,
 										'nama'=>$akun->nama,*/
 										'logged_in' => TRUE
@@ -163,8 +164,81 @@ class SimCheck extends CI_Controller {
 	}
 
 	public function olah_akun(){
+		/*$d['datatable'] = '<script src="'.asset_url().'/app/custom/general/account-manage.js" type="text/javascript"></script>';*/
 		$d['body'] = 'dashboard/olah/_akun-olah.php';
 		$this->load->view('dashboard/dtemplate.php',$d);
+	}
+
+	public function proc_olah_akun(){
+		$id_user = $_SESSION['id_user'];
+		$chpass = 0;
+		$chphoto  = 0;
+		$chverify = 0;
+		$status   = 0;
+		$akun = $this->system_model->check_user($id_user);
+		var_dump($_FILES['photo']);
+		if(!empty($akun)){
+			if(!empty($_POST['password_baru'])){
+				$pass = $this->input->post('password_baru');
+				$pass_lama = $this->input->post('password_lama');
+				$verify = verifyHashedPassword($pass_lama, $akun->password);
+				$chpass =1;
+				if ($verify == TRUE){
+					$chverify =1;
+					$d['password']= passwordHash($pass);
+				}
+			}
+
+			if($_FILES['photo']['size'] != 0 and $_FILES['photo']['error'] ==0){
+				$chphoto =1;
+				$img_size	= $_FILES['photo']['size'];
+				$ekstensi 	= pathinfo($_FILES["photo"]["name"])['extension'];
+		      	$target_dir = "./assets/media/users/";
+			}
+			if($chpass == 1 and $chphoto ==1){
+				$target_file = "photo-".$id_user.time().'.'.$ekstensi;
+				if ($img_size < 4194304 and $chverify ==1) {
+					move_uploaded_file($_FILES["photo"]["tmp_name"], $target_dir.$target_file);
+					$url_image = "/media/users/".$target_file;
+					$d['photo'] = $url_image;
+					$status = $this->system_model->update_acc($id_user,$d);
+					echo (($status > 0)? "success" : "failed" );
+					if ($status > 0){
+						$_SESSION['photo_user'] = $url_image;
+					}
+				}else {
+					echo "failed";
+				}
+			}else{
+				if ($chpass == 1 or $chphoto ==1){
+					if($chphoto ==1){
+						$target_file = "photo-".$id_user.time().'.'.$ekstensi;
+						if ($img_size < 4194304) {
+							move_uploaded_file($_FILES["photo"]["tmp_name"], $target_dir.$target_file);
+							$url_image = "/media/users/".$target_file;
+							$d['photo'] = $url_image;
+							$status = $this->system_model->update_acc($id_user,$d);
+							echo (($status > 0)? "success" : "failed" );
+							if ($status > 0){
+								$_SESSION['photo_user'] = $url_image;
+							}
+						}else {
+							echo "failed";
+						}
+					}elseif ($chverify ==1){
+						/*$d['photo'] = "/media/users/default.jpg";*/
+						$status = $this->system_model->update_acc($id_user, $d);
+						echo (($status > 0)? "success" : "failed" );
+					}else{
+						echo "failed";
+					}
+				}else{
+					echo "failed";
+				}
+			}
+		}else{
+			echo "failed";
+		}
 	}
 
 	public function format_judul(){
@@ -248,7 +322,7 @@ class SimCheck extends CI_Controller {
 		$this->CosimModel->update_batch_idf($idfUpdate);
 
 		$d['outputTerm'] = $this->CosimModel->titleTermSelectA();
-		$d['datatable'] = '<script src="'.asset_url().'app/custom/general/crud/metronic-datatable/base/html-table.js" type="text/javascript"></script>';
+		$d['datatable'] = '<script src="'.asset_url().'/app/custom/general/crud/metronic-datatable/base/html-table.js" type="text/javascript"></script>';
 		$d['body'] = 'dashboard/olah/_dataset-title--first.php'; 
 		$this->load->view('dashboard/dtemplate.php',$d);
 
@@ -277,7 +351,7 @@ class SimCheck extends CI_Controller {
 		}
 
 		$d['outputTerm'] = $this->CosimModel->titleVectorSelectA();
-		$d['datatable'] = '<script src="'.asset_url().'app/custom/general/crud/metronic-datatable/base/html-table.js" type="text/javascript"></script>';
+		$d['datatable'] = '<script src="'.asset_url().'/app/custom/general/crud/metronic-datatable/base/html-table.js" type="text/javascript"></script>';
 		$d['body'] = 'dashboard/olah/_dataset-title--second.php'; 
 		$this->load->view('dashboard/dtemplate.php',$d);
 
