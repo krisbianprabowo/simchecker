@@ -29035,6 +29035,7 @@ body {
   .kt-footer {
     padding: 15px 15px; } }
 
+
 @media (max-width: 768px) {
   .kt-footer {
     -webkit-box-orient: vertical;
@@ -29064,3 +29065,7 @@ body {
       .kt-footer .kt-footer__menu .kt-footer__menu-link:first-child {
         padding-left: 0;
         margin-left: 0; } }
+
+.acc-manages{
+  display: none;
+}

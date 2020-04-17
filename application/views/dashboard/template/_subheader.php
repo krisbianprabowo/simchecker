@@ -1,6 +1,6 @@
 								<div class="row">
-									<div class="col-xl-1"></div>
-									<div class="col-xl-10">
+									<div class="col-sm-1"></div>
+									<div class="col-sm-10">
 										<!-- begin:: Subheader -->
 										<div class="kt-subheader   kt-grid__item" id="kt_subheader">
 											<div class="kt-subheader__main">
@@ -25,7 +25,7 @@
 										</div>
 										<!-- end:: Subheader -->
 									</div>
-									<div class="col-xl-1"></div>
+									<div class="col-sm-1"></div>
 								</div>
 								<div class="mb-2"></div>
 								

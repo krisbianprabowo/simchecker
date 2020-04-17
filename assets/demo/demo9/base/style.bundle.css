@@ -29672,3 +29672,19 @@ body {
         .kt-footer .kt-footer__bottom .kt-footer__menu a:first-child {
           padding-left: 0;
           margin-left: 0; } }
+
+.hide-menus{
+  display: none !important; 
+}
+
+@media (max-width: 767px) {
+  .hide-menus{
+    display: inline !important; ;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hide-menus{
+    display: inline !important; ;
+  }
+}
