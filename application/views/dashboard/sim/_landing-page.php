@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Edumark</title>
+    <title>English Literature UAD Site</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
@@ -19,7 +19,7 @@
         });
     </script>
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="shortcut icon" href="<?php echo asset_url()?>/media/logos/favicon.ico" />
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
@@ -57,7 +57,7 @@
                                         <li><a href="#"  style="color:#384AD7">Similarity Check<i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="<?php echo site_url('SimCheck/simcheck_title')?>"  style="color:#384AD7">&#8226; 
-                                                Undergraduate Thesis</a></li>
+                                                Undergraduate Thesis Title</a></li>
                                                 <li><a href="<?php echo site_url('SimCheck/simcheck_theory')?>"  style="color:#384AD7">&#8226; Theory (Chapter 2)</a></li>
                                             </ul>
                                         </li>
@@ -94,6 +94,7 @@
                         </div>
                         <div class="col-12">
                             <div class="mobile_menu d-block d-lg-none"></div>
+                        
                         </div>
                     </div>
                 </div>

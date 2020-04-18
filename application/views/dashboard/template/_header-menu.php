@@ -9,7 +9,7 @@
 
 		<!-- begin:: Header Mobile -->
 		<?php if (isset($_SESSION['logged_in'])) {?>
-			<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
+			<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed " style="box-shadow: 0px 0px 9px 0px #888 !important;">
 				<div class="kt-header-mobile__logo">
 					<a href="index.html">
 						<!-- <img alt="Logo" src="<?php echo asset_url()?>/media/logos/logo-9-sm.png" /> -->
@@ -18,12 +18,12 @@
 				</div>
 				<div class="kt-header-mobile__toolbar">
 					<!-- <button class="kt-header-mobile__toolbar-toggler kt-header-mobile__toolbar-toggler--left" id="kt_aside_mobile_toggler"><span></span></button> -->
+					<a href="<?php echo site_url('SimCheck/olah_akun')?>" ><img class="kt-header-mobile__toolbar-toggler" style="width: 2.9rem; height: 2.9rem"src="<?php echo asset_url().$_SESSION['photo_user']?>" ></a>
 					<button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
-					<a href="<?php echo site_url('SimCheck/olah_akun')?>" ><img class="kt-header-mobile__toolbar-toggler" style="width: 3.1rem;"src="<?php echo asset_url().$_SESSION['photo_user']?>" ></a>
 				</div>
 			</div>
 		<?php } else {?>
-			<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
+			<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed " style="box-shadow: 0px 0px 9px 0px #888 !important;">
 				<div class="kt-header-mobile__logo">
 					<a href="index.html">
 						<!-- <img alt="Logo" src="<?php echo asset_url()?>/media/logos/logo-9-sm.png" /> -->
@@ -32,8 +32,7 @@
 				</div>
 				<div class="kt-header-mobile__toolbar">
 					<!-- <button class="kt-header-mobile__toolbar-toggler kt-header-mobile__toolbar-toggler--left" id="kt_aside_mobile_toggler"><span></span></button> -->
-					<button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
-					<div class="kt-margin-l-10-mobile"></div>
+					
 					<a href="<?php echo site_url('SimCheck/login')?>" >
 						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="22px" viewBox="0 0 22 22" version="1.1" class="kt-svg-icon">
 						    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -45,7 +44,8 @@
 						</svg>
 
 					</a>
-					<div class="kt-margin-r-10-mobile"></div>
+					<button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
+				
 				</div>
 			</div>
 		<?php } ?>
@@ -55,7 +55,7 @@
 				<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
 
 					<!-- begin:: Header -->
-					<div id="kt_header" class="kt-header  kt-header--fixed " data-ktheader-minimize="on">
+					<div id="kt_header" class="kt-header  kt-header--fixed " data-ktheader-minimize="on" style="box-shadow: 0px 0px 9px 0px #888 !important;">
 						<div class="kt-container kt-container--fluid">
 							<!-- begin: Header Menu -->
 							<button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
@@ -67,15 +67,15 @@
 									<ul class="kt-menu__nav ">
 										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="hover"><a href="<?php echo site_url('SimCheck')?>" class="kt-menu__link"><span class="kt-menu__link-text">Home</span></a>
 										</li>
-										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Similarity&nbsp;Check</span><i class="kt-menu__hor-arrow la la-angle-down"></i></a>
+										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Similarity&nbsp;Check</span><i class="kt-menu__hor-arrow la la-angle-down"></i><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
 											<div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
 												<ul class="kt-menu__subnav">
-													<li class="kt-menu__item "><a href="<?php echo site_url('SimCheck/simcheck_title')?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Undergraduate Thesis</span></a></li>
-													<li class="kt-menu__item "><a href="<?php echo site_url('SimCheck/simcheck_theory')?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Theory (Bab 2)</span></a></li>
+													<li class="kt-menu__item "><a href="<?php echo site_url('SimCheck/simcheck_title')?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Undergraduate Thesis Title</span></a></li>
+													<li class="kt-menu__item "><a href="<?php echo site_url('SimCheck/simcheck_theory')?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Theory (Chapter 2)</span></a></li>
 												</ul>
 											</div>
 										</li>
-										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Research</span><i class="kt-menu__hor-arrow la la-angle-down"></i></a>
+										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Research</span><i class="kt-menu__hor-arrow la la-angle-down"></i><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
 											<div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
 												<ul class="kt-menu__subnav">
 													<li class="kt-menu__item "><a href="<?php echo site_url('SimCheck/list_penelitian')?>" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">List of Research</span></a></li>

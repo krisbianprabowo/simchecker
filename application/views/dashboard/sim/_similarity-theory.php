@@ -2,65 +2,63 @@
 						<!--Begin::Section-->
 						<div class="row">
 							<div class="col-md-8">
-								<div class="kt-container kt-container--fluid">
-									<!--begin::Portlet-->
-									<?php if (isset($_SESSION['logged_in'])) {?>
-									<div class="kt-portlet">
-									<?php }else{ ?>
-									<div class="kt-portlet" style="background-color: rgba(255,255,255,0.5);filter:blur(3px);pointer-events:none;border:solid #777777">
-									<?php }?>
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<span class="kt-portlet__head-icon">
-													<i class="flaticon2-analytics-1 h2 text-success"></i>
-												</span>
-												<h3 class="kt-portlet__head-title">
-													Theory Similarity Checker 
-												</h3>
+								<!--begin::Portlet-->
+								<?php if (isset($_SESSION['logged_in'])) {?>
+								<div class="kt-portlet">
+								<?php }else{ ?>
+								<div class="kt-portlet" style="background-color: rgba(255,255,255,0.5);filter:blur(3px);pointer-events:none;border:1px solid #777777">
+								<?php }?>
+									<div class="kt-portlet__head">
+										<div class="kt-portlet__head-label">
+											<span class="kt-portlet__head-icon">
+												<i class="flaticon2-analytics-1 h2 text-success"></i>
+											</span>
+											<h3 class="kt-portlet__head-title">
+												Theory Similarity Checker 
+											</h3>
+										</div>
+									</div>
+									<form method="POST" action="<?php echo base_url('simCheck/theorytfidfproc')?>" enctype="multipart/form-data">
+										<div class="kt-portlet__body">
+											<div class="row">
+												<div class="col-md-12">
+												  <?php
+												  $info = $this->session->flashdata('info');
+												      if (!empty($info)){
+												        echo $info;
+												      }else {
+												  }?>
+												</div>
+											</div>
+											<span class="text-danger text-bold font-weight-bold kt-padding-l-20 kt-padding-l-15-mobile">*Before you take the similarity check, kindly read the instructions on the right box </span>
+											<div class="kt-portlet__body">
+												<span class="h5">Upload Your Files Theory</span>
+												<div class="custom-file">
+													<input type="file" class="custom-file-input" id="customFile" name="title">
+													<label class="custom-file-label" for="customFile">Choose file</label>
+												</div>
+
 											</div>
 										</div>
-										<form method="POST" action="<?php echo base_url('simCheck/theorytfidfproc')?>" enctype="multipart/form-data">
-											<div class="kt-portlet__body">
-												<div class="row">
-													<div class="col-md-12">
-													  <?php
-													  $info = $this->session->flashdata('info');
-													      if (!empty($info)){
-													        echo $info;
-													      }else {
-													  }?>
-													</div>
+										<div class="kt-portlet__foot">
+											<div class="row align-items-center">
+												<div class="col-lg-8 m--valign-middle small">
+													Click "Start" to begin the process
 												</div>
-												<span class="text-danger text-bold font-weight-bold kt-padding-l-20 kt-padding-l-15-mobile">*Before you take the similarity check, kindly read the instructions on the right box </span>
-												<div class="kt-portlet__body">
-													<span class="h5">Upload Your Files Theory</span>
-													<div class="custom-file">
-														<input type="file" class="custom-file-input" id="customFile" name="title">
-														<label class="custom-file-label" for="customFile">Choose file</label>
-													</div>
-
+												<div class="col-lg-4 kt-align-right">
+													<button type="submit" class="btn btn-success">START</button>
 												</div>
 											</div>
-											<div class="kt-portlet__foot">
-												<div class="row align-items-center">
-													<div class="col-lg-8 m--valign-middle small">
-														Click "Start" to begin the process
-													</div>
-													<div class="col-lg-4 kt-align-right">
-														<button type="submit" class="btn btn-success">START</button>
-													</div>
-												</div>
-											</div>
-										</form>
-									</div>
-									<?php if (!isset($_SESSION['logged_in'])) {?>
-									<div class="h2 text-dark text-center block-feature"><i class="fa fa-exclamation-triangle" style="font-size:1.5em; color: red"></i><br>Please Login To Access This Feature<br>
-										<a href="<?php echo site_url('SimCheck/Login')?>" class="btn btn-success">Login Now</a></div>
-									<?php }?>
-									<!--end::Portlet-->
+										</div>
+									</form>
 								</div>
+								<?php if (!isset($_SESSION['logged_in'])) {?>
+								<div class="h2 text-dark text-center block-feature"><i class="fa fa-exclamation-triangle" style="font-size:1.5em; color: red"></i><br>Please Login To Access This Feature<br>
+									<a href="<?php echo site_url('SimCheck/Login')?>" class="btn btn-success">Login Now</a></div>
+								<?php }?>
+								<!--end::Portlet-->
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-4 kt-margin-t-15-mobile">
 								<!--begin::Portlet-->
 								<div class="kt-portlet">
 									<div class="kt-portlet__head kt-bg-danger ">

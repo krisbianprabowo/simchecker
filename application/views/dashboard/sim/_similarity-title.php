@@ -5,52 +5,51 @@
 							<div class="col-md-8">
 
 								<!--begin::Portlet-->
-								<div class="kt-container kt-container--fluid">
-									<?php if (isset($_SESSION['logged_in'])) {?>
-									<div class="kt-portlet">
-									<?php }else{ ?>
-									<div class="kt-portlet" style="background-color: rgba(255,255,255,0.5);filter:blur(3px);pointer-events:none;border: 1px solid #777777">
-									<?php }?>
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<span class="kt-portlet__head-icon">
-													<i class="flaticon2-analytics-1 h2 text-success"></i>
-												</span>
-												<h3 class="kt-portlet__head-title">
-													Title Similarity Checker
-												</h3>
+								<?php if (isset($_SESSION['logged_in'])) {?>
+								<div class="kt-portlet">
+								<?php }else{ ?>
+								<div class="kt-portlet" style="background-color: rgba(255,255,255,0.5);filter:blur(3px);pointer-events:none;border: 1px solid #777777">
+								<?php }?>
+									<div class="kt-portlet__head">
+										<div class="kt-portlet__head-label">
+											<span class="kt-portlet__head-icon">
+												<i class="flaticon2-analytics-1 h2 text-success"></i>
+											</span>
+											<h3 class="kt-portlet__head-title">
+												Title Similarity Checker
+											</h3>
+										</div>
+									</div>
+									<form method="GET" action="<?php echo base_url('simCheck/titletfidfproc')?>">
+										<div class="kt-portlet__body">
+											<span class="text-danger text-bold font-weight-bold kt-padding-l-20 kt-padding-l-15-mobile">Before you take the similarity check, kindly read the instructions on the right box* </span>
+											<div class="kt-portlet__body">
+												
+												<span class="h5 text-dark">Type any of your thesis title below</span>
+												<textarea class="form-control" name="title" id="title" rows="3"></textarea>
+												
 											</div>
 										</div>
-										<form method="GET" action="<?php echo base_url('simCheck/titletfidfproc')?>">
-											<div class="kt-portlet__body">
-												<span class="text-danger text-bold font-weight-bold kt-padding-l-20 kt-padding-l-15-mobile">Before you take the similarity check, kindly read the instructions on the right box* </span>
-												<div class="kt-portlet__body">
-													
-													<span class="h5 text-dark">Type any of your thesis title below</span>
-													<textarea class="form-control" name="title" id="title" rows="3"></textarea>
-													
+										<div class="kt-portlet__foot">
+											<div class="row align-items-center">
+												<div class="col-lg-8 m--valign-middle small">
+													Click "Start" to begin the process
+												</div>
+												<div class="col-lg-4 kt-align-right">
+													<button type="submit" class="btn btn-success" id="start-check" >START</button>
 												</div>
 											</div>
-											<div class="kt-portlet__foot">
-												<div class="row align-items-center">
-													<div class="col-lg-8 m--valign-middle small">
-														Click "Start" to begin the process
-													</div>
-													<div class="col-lg-4 kt-align-right">
-														<button type="submit" class="btn btn-success" id="start-check" >START</button>
-													</div>
-												</div>
-											</div>
-										</form>
-									</div>
-									<?php if (!isset($_SESSION['logged_in'])) {?>
-									<div class="h2 text-dark text-center block-feature"><i class="fa fa-exclamation-triangle" style="font-size:1.5em; color: red"></i><br>Please Login To Access This Feature<br>
-										<a href="<?php echo site_url('SimCheck/Login')?>" class="btn btn-success">Login Now</a></div>
-									<?php }?>
+										</div>
+									</form>
 								</div>
+								<?php if (!isset($_SESSION['logged_in'])) {?>
+								<div class="h2 text-dark text-center block-feature"><i class="fa fa-exclamation-triangle" style="font-size:1.5em; color: red"></i><br>Please Login To Access This Feature<br>
+									<a href="<?php echo site_url('SimCheck/Login')?>" class="btn btn-success">Login Now</a></div>
+								<?php }?>
 								<!--end::Portlet-->
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-4 kt-margin-t-15-mobile">
+
 								<!--begin::Portlet-->
 								<div class="kt-portlet">
 									<div class="kt-portlet__head " style="background-color: #fa0c52 !important">
