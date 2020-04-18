@@ -21,7 +21,7 @@
 										<!--begin: Search Form -->
 										<div class="kt-form kt-form--label-right kt-margin-t-0 kt-margin-b-10">
 											<div class="row align-items-center">
-												<div class="col-xl-12 order-1 order-xl-1">
+												<div class="col-sm-8 order-1 order-xl-1">
 													<div class="row align-items-center">
 														<div class="col-md-12 kt-margin-b-20-tablet-and-mobile">
 															<div class="kt-input-icon kt-input-icon--left">
@@ -33,6 +33,9 @@
 														</div>
 													</div>
 												</div>
+												<div class="col-sm-4 order-2 order-xl-1 kt-align-right">
+													<span class="text-danger text-bold font-weight-bold">Click any columns to sort the table <i class="fa fa-arrow-up"></i><i class="fa fa-arrow-down"></i>* </span>
+												</div>
 											</div>
 										</div>
 
@@ -43,19 +46,15 @@
 										<table class="kt-datatable table-hover responsive" id="auto_column_hide" width="100%">
 											<thead>
 												<tr>
-													<th title="Field #1">No</th>
 													<th title="Field #2">NIM</th>
 													<th title="Field #3">Name</th>
 													<th title="Field #4">Title</th>
-													<th title="Field #5">Start Date</th>
-													<th title="Field #6">End of Semesters</th>
+													<th title="Field #5">Finished on</th>
 												</tr>
 											</thead>
 											<tbody >
 												<?php foreach($l as $l){ ?>
 													<tr>
-														<td><span class="text-dark">
-															<?php echo $l->no?></span></td>
 														<td><span class="text-dark">
 															<?php echo $l->NIM?></span></td>
 														<td><span class="text-dark">
@@ -63,9 +62,7 @@
 														<td><span class="text-dark">
 															<?php echo $l->judul?></td>
 														<td><span class="text-dark">
-															<?php echo $l->tanggal_mulai?></span></td>
-														<td><span class="text-dark">
-															<?php echo $l->semester_selesai?></span></td>
+															<?php echo $l->tanggal_ujian?></span></td>
 													</tr>
 												<?php
 												}?>

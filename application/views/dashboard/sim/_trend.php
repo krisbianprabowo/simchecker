@@ -8,6 +8,7 @@
 									<div class="kt-portlet kt-portlet--height-fluid">
 										<div class="kt-widget14">
 											<div class="kt-widget14__header kt-margin-b-30">
+												
 												<h3 class="kt-widget14__title">
 													Literatures
 												</h3>
@@ -37,6 +38,9 @@
 														</tr>
 													</tbody>
 												</table>
+												<span class="kt-widget14__desc text-danger">
+													 *This Pages is still on working progress, only dummy data displayed*
+												</span>
 											</div>
 										</div>
 									</div>
@@ -77,6 +81,9 @@
 														</tr>
 													</tbody>
 												</table>
+												<span class="kt-widget14__desc text-danger">
+													 *This Pages is still on working progress, only dummy data displayed*
+												</span>
 											</div>
 										</div>
 									</div>
@@ -117,6 +124,9 @@
 														</tr>
 													</tbody>
 												</table>
+												<span class="kt-widget14__desc text-danger">
+													 *This Pages is still on working progress, only dummy data displayed*
+												</span>
 											</div>
 										</div>
 									</div>

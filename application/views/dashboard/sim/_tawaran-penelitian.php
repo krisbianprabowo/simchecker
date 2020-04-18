@@ -32,12 +32,6 @@
 															Info
 														</a>
 													</li>
-													<li class="nav-item">
-														<a class="nav-link" data-toggle="tab" href="#kt_portlet_tab_1_2" role="tab">
-															<i class="flaticon-comment"></i>
-															Komentar
-														</a>
-													</li>
 												</ul>
 											</div>
 										</div>
@@ -45,11 +39,11 @@
 											<div class="tab-content">
 												<div class="tab-pane active" id="kt_portlet_tab_1_1">
 													<div class="form-group row">
-														<label class="col-lg-1">Dosen</label>
+														<label class="col-lg-1">From</label>
 														<div class="col-lg-4">
 															<label class=" text-dark font-weight-bold"> Sri Winiarti  S.T, M.Cs</label>
 														</div>
-														<label class="col-lg-1">Penjurusan</label>
+														<label class="col-lg-1">Interest</label>
 														<div class="col-lg-4">
 															<label class=" text-dark font-weight-bold"> American Studies</label>
 														</div>
@@ -60,71 +54,9 @@
 													<div class="form-group row">
 														<label class="col-lg-1 text-danger">Notes :</label>
 														<div class="col-lg-11">
-															<label class=" text-dark"> Jika berminat dengan judul yang saya tawarkan, silahkan hubungi nomor WA saya atau bisa email saya di dosen@uad.ac.id</label>
+															<label class=" text-dark"> Jika berminat dengan judul yang saya tawarkan, silahkan hubungi nomor WA saya atau bisa email saya di From@uad.ac.id</label>
 														</div>
 													</div>
-												</div>
-												<div class="tab-pane" id="kt_portlet_tab_1_2">
-													<!-- Begin:: Komentar -->
-													<div class="kt-widget3">
-														<div class="kt-widget3__item">
-															<div class="kt-widget3__header">
-																<div class="kt-widget3__user-img">
-																	<img class="kt-widget3__img" src="../assets/media/users/300_21.jpg" alt="">
-																</div>
-																<div class="kt-widget3__info">
-																	<a href="#" class="kt-widget3__username">
-																		Krisbiantoro Prabowo
-																	</a><br>
-																	<span class="kt-widget3__time">
-																		5 July 2019, at 09:00 
-																	</span>
-																</div>
-																<span class="kt-widget3__status kt-font-info">
-																	<span class="btn btn-label-primary btn-sm btn-bold btn-font-md">Mahasiswa</span>
-																</span>
-															</div>
-															<div class="kt-widget3__body">
-																<p class="kt-widget3__text text-dark">
-																	Maaf Bu, untuk judul penelitiannya apakah sudah ada yang mengambil atau belum ya bu?
-																</p>
-															</div>
-														</div>
-														<div class="kt-widget3__item">
-															<div class="kt-widget3__header">
-																<div class="kt-widget3__user-img">
-																	<img class="kt-widget3__img" src="../assets/media/users/user1.jpg" alt="">
-																</div>
-																<div class="kt-widget3__info">
-																	<a href="#" class="kt-widget3__username">
-																		Sri Winiarti S.T, M.Cs
-																	</a><br>
-																	<span class="kt-widget3__time">
-																		6 July 2019, at 13:45
-																	</span>
-																</div>
-																<span class="kt-widget3__status kt-font-brand">
-																	<span class="btn btn-label-danger btn-sm btn-bold btn-font-md">Dosen</span>
-																</span>
-															</div>
-															<div class="kt-widget3__body">
-																<p class="kt-widget3__text text-dark">
-																	Belum mas, langsung contact WA aja ya jika berminat
-																</p>
-															</div>
-														</div>
-														<div class="form-group">
-															<label class="col-form-label font-weight-bold"> Tambahkan Komentar </label>
-																<span class="kt-widget3__time">
-																	<small>sebagai Krisbiantoro Prabowo </small>
-																</span>
-															<textarea class="form-control" placeholder="Add a Reply..."></textarea>
-														</div>
-														<div class="kt-form__actions">
-															<button type="submit" class="btn btn-success">Submit</button>
-														</div>
-													</div>
-													<!-- End:: Komentar -->
 												</div>
 											</div>
 										</div>
@@ -147,12 +79,6 @@
 															Info
 														</a>
 													</li>
-													<li class="nav-item">
-														<a class="nav-link" data-toggle="tab" href="#kt_portlet_tab_2_2" role="tab">
-															<i class="flaticon-comment"></i>
-															Komentar
-														</a>
-													</li>
 												</ul>
 											</div>
 										</div>
@@ -160,11 +86,11 @@
 											<div class="tab-content">
 												<div class="tab-pane active" id="kt_portlet_tab_2_1">
 													<div class="form-group row">
-														<label class="col-lg-1">Dosen</label>
+														<label class="col-lg-1">From</label>
 														<div class="col-lg-4">
 															<label class=" text-dark font-weight-bold">Ulaya Ahdiani, S.S., M.Hum</label>
 														</div>
-														<label class="col-lg-1">Penjurusan</label>
+														<label class="col-lg-1">interest</label>
 														<div class="col-lg-4">
 															<label class=" text-dark font-weight-bold"> Linguistic</label>
 														</div>
@@ -223,12 +149,6 @@
 															Info
 														</a>
 													</li>
-													<li class="nav-item">
-														<a class="nav-link" data-toggle="tab" href="#kt_portlet_tab_3_2" role="tab">
-															<i class="flaticon-comment"></i>
-															Komentar
-														</a>
-													</li>
 												</ul>
 											</div>
 										</div>
@@ -236,11 +156,11 @@
 											<div class="tab-content">
 												<div class="tab-pane active" id="kt_portlet_tab_3_1">
 													<div class="form-group row">
-														<label class="col-lg-1">Dosen</label>
+														<label class="col-lg-1">From</label>
 														<div class="col-lg-4">
 															<label class=" text-dark font-weight-bold"> Sri Winiarti  S.T, M.Cs</label>
 														</div>
-														<label class="col-lg-1">Penjurusan</label>
+														<label class="col-lg-1">interest</label>
 														<div class="col-lg-4">
 															<label class=" text-dark font-weight-bold"> Literatures</label>
 														</div>
@@ -289,3 +209,68 @@
 				</div>
 				<!--End::Section-->
 				<?php include('_padding-content--end.php') ?>
+
+												<!-- Begin:: Komentar -->
+												<!-- <div class="tab-pane" id="kt_portlet_tab_1_2">
+													
+													<div class="kt-widget3">
+														<div class="kt-widget3__item">
+															<div class="kt-widget3__header">
+																<div class="kt-widget3__user-img">
+																	<img class="kt-widget3__img" src="../assets/media/users/300_21.jpg" alt="">
+																</div>
+																<div class="kt-widget3__info">
+																	<a href="#" class="kt-widget3__username">
+																		Krisbiantoro Prabowo
+																	</a><br>
+																	<span class="kt-widget3__time">
+																		5 July 2019, at 09:00 
+																	</span>
+																</div>
+																<span class="kt-widget3__status kt-font-info">
+																	<span class="btn btn-label-primary btn-sm btn-bold btn-font-md">Mahasiswa</span>
+																</span>
+															</div>
+															<div class="kt-widget3__body">
+																<p class="kt-widget3__text text-dark">
+																	Maaf Bu, untuk judul penelitiannya apakah sudah ada yang mengambil atau belum ya bu?
+																</p>
+															</div>
+														</div>
+														<div class="kt-widget3__item">
+															<div class="kt-widget3__header">
+																<div class="kt-widget3__user-img">
+																	<img class="kt-widget3__img" src="../assets/media/users/user1.jpg" alt="">
+																</div>
+																<div class="kt-widget3__info">
+																	<a href="#" class="kt-widget3__username">
+																		Sri Winiarti S.T, M.Cs
+																	</a><br>
+																	<span class="kt-widget3__time">
+																		6 July 2019, at 13:45
+																	</span>
+																</div>
+																<span class="kt-widget3__status kt-font-brand">
+																	<span class="btn btn-label-danger btn-sm btn-bold btn-font-md">From</span>
+																</span>
+															</div>
+															<div class="kt-widget3__body">
+																<p class="kt-widget3__text text-dark">
+																	Belum mas, langsung contact WA aja ya jika berminat
+																</p>
+															</div>
+														</div>
+														<div class="form-group">
+															<label class="col-form-label font-weight-bold"> Tambahkan Komentar </label>
+																<span class="kt-widget3__time">
+																	<small>sebagai Krisbiantoro Prabowo </small>
+																</span>
+															<textarea class="form-control" placeholder="Add a Reply..."></textarea>
+														</div>
+														<div class="kt-form__actions">
+															<button type="submit" class="btn btn-success">Submit</button>
+														</div>
+													</div>
+													
+												</div> -->
+												<!-- End:: Komentar -->

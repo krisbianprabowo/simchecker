@@ -1,4 +1,4 @@
-"use strict";
+
 // Class definition
 
 var KTDatatableAutoColumnHideDemo = function() {
@@ -37,19 +37,21 @@ var KTDatatableAutoColumnHideDemo = function() {
 					width: 40,
 				}, {
 					field: 'NIM',
-					width: 90,
+					
 				}, {
-					field: 'Nama',
-					width: 'auto',
+					field: 'Name',
+					autoHide: false
 				}, {
-					field: 'Judul',
-					width: 320,
+					field: 'Title',
+					autoHide: false
 				}, {
 					field: 'Dosen Penguji',
-					width: 'auto',
 				}, {
-					field: 'Website',
-					title: 'Website',
+					field: 'Finished on',
+					type: 'date',
+					format: 'DD-MM-YYYY',
+					width: 100,
+					sortable: 'desc',
 				}, {
 					field: 'TotalPayment',
 					title: 'Payment',
@@ -129,5 +131,5 @@ var KTDatatableAutoColumnHideDemo = function() {
 }();
 
 jQuery(document).ready(function() {
-	KTDatatableAutoColumnHideDemo.init();
+    KTDatatableAutoColumnHideDemo.init();
 });
