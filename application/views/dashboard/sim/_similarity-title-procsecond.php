@@ -69,8 +69,8 @@
 														<td>
 															<?php $cs = $rS['cosim'];
 															if($cs == 0){$status=1;}
-															elseif($cs >0 and $cs<=0.24){$status=2;}
-															elseif($cs >=0.25 and $cs<=0.49){$status=3;}
+															elseif($cs >0 and $cs<=0.24999){$status=2;}
+															elseif($cs >=0.25 and $cs<=0.49999){$status=3;}
 															elseif($cs >=0.5){$status=4;}
 															if(isset($status)){
 																echo $status;
@@ -83,7 +83,14 @@
 
 											</tbody>
 										</table>
-
+										<div class="row">
+											<div class="col-md-10">
+											</div>
+											<div class="col-md-2">
+												<a href="<?php echo base_url('simCheck/simcheck_title')?>"  class="btn btn-success" id="start-check" >First Page <i class="flaticon2-right-arrow"></i>
+												</a>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>

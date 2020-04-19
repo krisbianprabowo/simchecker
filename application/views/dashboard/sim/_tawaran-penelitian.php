@@ -10,8 +10,11 @@
 										<i class="flaticon-star h2 text-warning"></i>
 									</span>
 									<h3 class="kt-portlet__head-title">
-										Tawaran Penelitian
+										Research Offer
 									</h3>
+									<span class="kt-widget14__desc text-danger font-weight-bold">
+										 (This Pages is still on working progress, only dummy data displayed)
+									</span>
 								</div>
 							</div>
 							<div class="kt-portlet__body">

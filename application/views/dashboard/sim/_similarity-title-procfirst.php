@@ -27,45 +27,46 @@
 							<div class="kt-portlet__body">
 								<div class="tab-content">
 									<div class="tab-pane active" id="kt_portlet_base_demo_2_3_tab_content" role="tabpanel">
-										<!--begin: Datatable -->
-										<table class="kt-datatable table-hover responsive" id="html_table" width="100%">
-											<thead style="background-color: rgba(201, 205, 209, 0.15);">
-												<tr>
-													<th title="Field #1">ID</th>
-													<th title="Field #2">Term</th>
-													<th title="Field #3">Found in Doc</th>
-													<th title="Field #4">TF (in Doc)</th>
-													<th title="Field #5">TF (in Query)</th>
-													<th title="Field #5">IDF</th>
-													<th title="Field #6">Weight</th>
-												</tr>
-											</thead>
-											<tbody >
-												<?php 
-												if(isset($outputTerm)){
-													foreach($outputTerm as $oT){?>
+										<div class="table-responsive">
+											<table class="table table-hover ">
+												<thead class="text-white text-center" style="background-color:#5867dd;">
 													<tr>
-														<td><span class="text-dark">
-															<?php echo $oT['idTerm']?></span></td>
-														<td><span class="text-dark">
-															<?php echo $oT['term']?></span></td>
-														<td><span class="text-dark">
-															<?php echo $oT['jumDoc']?></span></td>
-														<td><span class="text-dark">
-															<?php echo $oT['jumTermDoc']?></td>
-														<td><span class="text-dark">
-															<?php echo $oT['jumTermQuery']?></span></td>
-														<td><span class="text-dark">
-														<?php echo $oT['idf']?></span></td>
-														<td><span class="text-dark">
-														<?php echo $oT['weight']?></span></td>
+														<th title="Field #1">ID</th>
+														<th title="Field #2">Term</th>
+														<th title="Field #3">Found in Doc</th>
+														<th title="Field #4">TF (in Doc)</th>
+														<th title="Field #5">TF (in Query)</th>
+														<th title="Field #5">IDF</th>
+														<th title="Field #6">Weight</th>
 													</tr>
-												<?php
-													}
-												}?>
+												</thead>
+												<tbody class="text-center">
+													<?php 
+													if(isset($outputTerm)){
+														foreach($outputTerm as $oT){?>
+														<tr>
+															<td><span class="text-dark">
+																<?php echo $oT['idTerm']?></span></td>
+															<td class="text-left"><span class="text-dark ">
+																<?php echo $oT['term']?></span></td>
+															<td><span class="text-dark">
+																<?php echo $oT['jumDoc']?></span></td>
+															<td><span class="text-dark">
+																<?php echo $oT['jumTermDoc']?></span></td>
+															<td><span class="text-dark">
+																<?php echo $oT['jumTermQuery']?></span></td>
+															<td><span class="text-dark">
+															<?php echo $oT['idf']?></span></td>
+															<td><span class="text-dark">
+															<?php echo $oT['weight']?></span></td>
+														</tr>
+													<?php
+														}
+													}?>
 
-											</tbody>
-										</table>
+												</tbody>
+											</table>
+										</div>
 										<div class="row">
 											<div class="col-md-10">
 											</div>
@@ -76,7 +77,31 @@
 										</div>
 									</div>
 									<div class="tab-pane" id="kt_portlet_base_demo_2_2_tab_content" role="tabpanel">
-										It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+										<div class="table-responsive">
+											<table class="table  table-hover ">
+												<thead class="text-white text-center" style="background-color:#5867dd;">
+													<tr>
+														<th title="Field #1">Title ID</th>
+														<th title="Field #2">Vector Values</th>
+													</tr>
+												</thead>
+												<tbody class="text-center" >
+													<?php
+													if(isset($outputTermR)){
+														foreach($outputTermR as $oTR){?>
+														<tr>
+															<td><span class="text-dark">
+																<?php echo $oTR['docid']?></span></td>
+															<td><span class="text-dark">
+																<?php echo $oTR['yvector']?></span></td>
+														</tr>
+													<?php
+														}
+													}?>
+
+												</tbody>
+											</table>
+										</div>
 										<div class="row">
 											<div class="col-md-10">
 											</div>
@@ -92,5 +117,6 @@
 
 					<!--end::Portlet-->
 					<!--begin::Page Scripts(used by this page) -->
-						
+					<!-- <table class="kt-datatable table-hover responsive" id="html_table" width="100%">
+					<thead style="background-color: rgba(201, 205, 209, 0.15);"> -->
 					<?php include('_padding-content--end.php') ?>

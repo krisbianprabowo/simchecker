@@ -8,24 +8,28 @@ class CosimModel extends CI_Model {
 
 	public function list_penelitian_seluruh(){
 		$this->db->select('no,judul');
-		return $this->db->get('title_train')->result() ? : 0;
+		return $this->db->get('title_coll')->result() ? : 0;
+	}
+
+	public function listPenelitian(){
+		return $this->db->get('title_coll')->result() ? : 0;
 	}
 
 
 	public function list_penelitian_seluruh_a(){
-		return $this->db->get('title_train')->result_array() ? : 0;
+		return $this->db->get('title_coll')->result_array() ? : 0;
 	}
 
 	public function update_judul($id,$title){
 		$this->db->set('judul',$title);
 		$this->db->where('no',$id);
-		$this->db->update('title_train');
+		$this->db->update('title_coll');
 		
 		return $this->db->affected_rows() > 0;
 	}
 
 	public function jumlah_penelitian(){
-		$q = $this->db->get('title_train');
+		$q = $this->db->get('title_coll');
 
 		return $q->num_rows() !=0 ? : 0;
 	}
@@ -121,14 +125,14 @@ class CosimModel extends CI_Model {
 
 	public function jumlah_doc(){
 		$this->db->select('no');
-		$q = $this->db->get('title_train');
+		$q = $this->db->get('title_coll');
 
 		return $q->num_rows() ? : 0;
 	}
 
 	public function jumlah_docx(){
 		$this->db->select('no');
-		$q = $this->db->get('title_train');
+		$q = $this->db->get('title_coll');
 
 		return $q->num_rows() ? : 0;
 	}
@@ -173,6 +177,10 @@ class CosimModel extends CI_Model {
 		return $this->db->get('sc_title_vector')->result() ? : 0;
 	}
 
+	public function titleVectorSelectQ(){
+		return $this->db->get('sc_q_vector')->result() ? : 0;
+	}
+
 	public function insert_vector($v){
 		$this->db->insert('sc_title_vector',$v);
 
@@ -205,7 +213,7 @@ class CosimModel extends CI_Model {
 
 	public function tempTableCosimSelect(){
 		$this->db->select('t.no, t.NIM, t.nama, t.judul, tc.cosim');
-		$this->db->from('title_train t, temp_cosim tc');
+		$this->db->from('title_coll t, temp_cosim tc');
 		$this->db->where('tc.docid = t.no');
 		$this->db->order_by('tc.cosim', 'DESC');
 		$this->db->limit(20);

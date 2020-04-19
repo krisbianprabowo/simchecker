@@ -137,7 +137,7 @@ class SimCheck extends CI_Controller {
 	}
 
 	public function list_penelitian(){
-		$d['l'] = $this->demo_model->list_penelitian_seluruh();
+		$d['l'] = $this->CosimModel->listPenelitian();
 		$d['datatable'] = '<script src="'.asset_url().'/app/custom/general/crud/metronic-datatable/advanced/row-details1.js" type="text/javascript"></script>';
 
 		$d['body'] = 'dashboard/sim/_list-penelitian.php';
@@ -164,12 +164,19 @@ class SimCheck extends CI_Controller {
 	}
 
 	public function olah_akun(){
-		/*$d['datatable'] = '<script src="'.asset_url().'/app/custom/general/account-manage.js" type="text/javascript"></script>';*/
-		$d['body'] = 'dashboard/olah/_akun-olah.php';
-		$this->load->view('dashboard/dtemplate.php',$d);
+		if (isset($_SESSION['logged_in'])) {
+			/*$d['datatable'] = '<script src="'.asset_url().'/app/custom/general/account-manage.js" type="text/javascript"></script>';*/
+			$d['body'] = 'dashboard/olah/_akun-olah.php';
+			$this->load->view('dashboard/dtemplate.php',$d);
+		}else {
+			$error ="You Must Login First To Access The Pages";
+			$this->session->set_flashdata('info',error_message($error));
+			redirect(site_url('SimCheck/login'));
+		}
 	}
 
 	public function proc_olah_akun(){
+
 		$id_user = $_SESSION['id_user'];
 		$chpass = 0;
 		$chphoto  = 0;
@@ -531,9 +538,13 @@ class SimCheck extends CI_Controller {
 			$xVectorR3 	= round($xvector,4);
 
 			$_SESSION['xVector']	= $xVectorR3;
+			$dataV['docid']	= '1';
+			$dataV['yvector'] = $xVectorR3;
 
+			$qtermArrVec[] = $dataV;
 			if(isset($_SESSION['xVector'])){
 				$d['outputTerm']	= $qTermArr;
+				$d['outputTermR']	= $qtermArrVec;
 			}else{
 				$d['title_check'] = "Terjadi Kesalahan Selama Pemrosesan Data, Mohon Ulangi Kembali";
 			}
