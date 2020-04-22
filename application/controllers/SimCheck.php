@@ -553,8 +553,9 @@ class SimCheck extends CI_Controller {
 
 		//tampilkan hasil perhitungan TF-IDF dalam Website
 		$d['datatable'] = '<script src="'.asset_url().'/app/custom/general/crud/metronic-datatable/advanced/cosimprocs1.js" type="text/javascript"></script>';
-		$d['body'] = 'dashboard/sim/_similarity-title-procfirst.php'; 
-		$this->load->view('dashboard/dtemplate.php',$d);
+	/*	$d['body'] = 'dashboard/sim/_similarity-title-procfirst.php'; 
+		$this->load->view('dashboard/dtemplate.php',$d);*/
+		redirect(base_url('SimCheck/titlecosimproc'));
 
 	}
 
