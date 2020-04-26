@@ -37,7 +37,7 @@ var KTDatatableAutoColumnHideDemo = function() {
 					width: 40,
 				}, {
 					field: 'NIM',
-					
+					sortable: 'desc',
 				}, {
 					field: 'Name',
 					autoHide: false
@@ -51,7 +51,6 @@ var KTDatatableAutoColumnHideDemo = function() {
 					type: 'date',
 					format: 'DD-MM-YYYY',
 					width: 100,
-					sortable: 'desc',
 				}, {
 					field: 'TotalPayment',
 					title: 'Payment',

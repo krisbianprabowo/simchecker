@@ -8,7 +8,7 @@
 										<i class="flaticon2-list-3 h2 text-primary"></i>
 									</span>
 									<h3 class="kt-portlet__head-title">
-										Daftar Penelitian
+										Research List
 									</h3>
 								</div>
 
@@ -35,8 +35,8 @@
 												</div>
 												<div class="col-xl-4 order-2 order-xl-1 kt-align-right">
 													<div class="dropdown dropdown-inline">
-														<button type="button" class="btn btn-outline-success btn-icon-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-															<i class="la la-download"></i> Export
+														<button type="button" class="btn btn-outline-success btn-pill btn-icon-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+															<i class="fa fa-cloud-download-alt"></i> Export
 														</button>
 														<div class="dropdown-menu dropdown-menu-right">
 															<ul class="kt-nav">
@@ -59,16 +59,17 @@
 														</div>
 													</div>
 													&nbsp;
-													<a href="#" class="btn btn-brand btn-elevate btn-icon-sm">
-														<i class="la la-plus"></i>
-													Tambah Penelitian
-													</a>
+													<button href="#" class="btn btn-brand btn-pill btn-elevate btn-icon-sm" data-toggle="modal" data-target="#kt_modal_4" id="clickMe">
+														<i class="fa fa-plus"></i>
+													Add Research
+													</button>
 												</div>
 											</div>
 										</div>
 
 										<!--end: Search Form -->
 									</div>
+
 									<div class="kt-portlet__body kt-portlet__body--fit">
 										<!--begin: Datatable -->
 										<table class="kt-datatable table-hover responsive no-wrap" id="auto_column_hide" width="100%">
@@ -129,8 +130,128 @@
 									</div>
 								</div>
 							</div>
+							<!--begin::Modal-->
+							<div class="modal fade" id="kt_modal_4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">Add Research</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											</button>
+										</div>
+										<div class="modal-body">
+											<form>
+												<div class="form-group row">
+													<div class="col-6">
+														<label for="recipient-name" class="form-control-label">NIM:</label>
+														<input type="text" class="form-control" id="" placeholder="1500026105">
+													</div>
+													<div class="col-6">
+														<label for="message-text" class="form-control-label">Nama:</label>
+														<input type="text" class="form-control" id="" placeholder="Agus Budi">
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="message-text" class="form-control-label">Judul:</label>
+													<textarea class="form-control" id="message-text"></textarea>
+												</div>
+												<div class="form-group row">
+													<div class="col-6">
+														<label for="message-text" class="form-control-label">Tanggal Mulai:</label>
+														<input type="text" class="form-control" id="kt_inputmask_1" placeholder="Contoh: 23-04-2020">
+														<span class="form-text text-muted">format tanggal <code>tanggal-bulan-tahun</code> ex: <span class="font-weight-bold">23-04-2020</span></span>
+													</div>
+													<div class="col-6">
+														<label for="message-text" class="form-control-label">Semester Mulai:</label>
+														<input type="text" class="form-control" id="" placeholder="Contoh : Gasal 2020">
+														<span class="form-text text-muted">format penulisan <code>semester tahunpelajaran</code> ex: <span class="font-weight-bold">Gasal 2020</span></span>
+													</div>
+												</div>
+												<div class="form-group row">
+													<div class="col-6">
+														<label for="message-text" class="form-control-label">Semester Selesai:</label>
+														<input type="text" class="form-control" id="" placeholder="Contoh : Genap 2020">
+													</div>
+													<div class="col-6">
+														<label for="message-text" class="form-control-label">Status Tugas Akhir:</label>
+														<select class="form-control kt-selectpicker">
+															<option data-content="<span class='kt-badge kt-badge--success kt-badge--inline kt-badge--rounded'>LULUS</span>">LULUS</option>
+															<option data-content="<span class='kt-badge kt-badge--warning kt-badge--inline kt-badge--rounded'>SEDANG DIKERJAKAN</span>">SEDANG DIKERJAKAN</option>
+														</select>
+													</div>
+												</div>
+												<div class="form-group row">
+													<div class="col-6">
+														<label for="message-text" class="form-control-label">Dosen Pembimbing:</label>
+														<div class="typeahead">
+															<input class="form-control" id="kt_typeahead_1" type="text" dir="ltr" placeholder="Dosen Pembimbing">
+														</div>
+													</div>
+													<div class="col-6">
+														<label for="message-text" class="form-control-label">Nilai:</label>
+														<!-- <input type="text" class="form-control" id="" maxlength="1"> -->
+														<select class="form-control kt-selectpicker" data-live-search='true' id="selectnilai" onchange="run()">
+															<option value="">(Belum Ada Nilai)</option>
+															<option>A</option>
+															<option>B</option>
+															<option>C</option>
+															<option>D</option>
+															<option>E</option>
+															<option>T</option>
+														</select>
+													</div>
+												</div>
+												<div class="form-group row">
+													<div class="col-6">
+														<label for="message-text" class="form-control-label">Tanggal Ujian:</label>
+														<input type="text" class="form-control" id="kt_inputmask_2" placeholder="Contoh: 23-04-2020">
+													</div>
+													<div class="col-6">
+														<div class="row"> 
+															<div class="col-6">
+																<label for="message-text" class="form-control-label">Penguji 1:</label>
+																<div class="typeahead">
+																	<input class="form-control" id="kt_typeahead_1_1" type="text" dir="ltr" placeholder="Dosen Penguji 1">
+																</div>
+															</div>
+															<div class="col-6">
+																<label for="message-text" class="form-control-label">Penguji 2:*</label>
+																<div class="typeahead">
+																	<input class="form-control" id="kt_typeahead_1_1" type="text" dir="ltr" placeholder="Dosen Penguji 2 (Jika Ada)">
+																</div>
+																<span class="form-text text-muted"><code><span class="font-weight-bold">*Jika Ada</span></code> </span>
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-primary">Send message</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--end::Modal-->
 						</div>
 						<!--end::Section-->
 						<!--begin::Page Scripts(used by this page) -->
-						
+						<script>
+
+							document.addEventListener('DOMContentLoaded', function(){
+								const queryString = window.location.search;
+								if (queryString == "?modal=true"){
+									document.getElementById('clickMe').click();
+								}
+								console.log(queryString);
+							}, false);
+							
+							
+						    function run() {
+						        var value = document.getElementById("selectnilai").value;
+						        console.log(value);
+						    }
+						</script>
 					<?php include('/../sim/_padding-content--end.php') ?>

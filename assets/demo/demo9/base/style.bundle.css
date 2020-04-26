@@ -26079,7 +26079,7 @@ body {
 
 @media (min-width: 1025px) {
   body.kt-header--fixed {
-    padding-top: 80px; }
+    padding-top: 80px !important; }
   body.kt-header--fixed.kt-subheader--fixed.kt-subheader--enabled {
     padding-top: 134px; }
   .kt-subheader {

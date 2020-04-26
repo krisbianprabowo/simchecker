@@ -8,13 +8,13 @@ var KTBootstrapDatetimepicker = function () {
         $('#kt_datetimepicker_1').datetimepicker({
             todayHighlight: true,
             autoclose: true,
-            format: 'yyyy.mm.dd hh:ii'
+            format: 'yyyy-mm-dd'
         });
 
         $('#kt_datetimepicker_1_modal').datetimepicker({
             todayHighlight: true,
             autoclose: true,
-            format: 'yyyy.mm.dd hh:ii'
+            format: 'yyyy-mm-dd'
         });
 
         // input group demo
@@ -22,29 +22,29 @@ var KTBootstrapDatetimepicker = function () {
             todayHighlight: true,
             autoclose: true,
             pickerPosition: 'bottom-left',
-            format: 'yyyy/mm/dd hh:ii'
+            format: 'yyyy-mm-dd'
         });
         $('#kt_datetimepicker_2_modal').datetimepicker({
             todayHighlight: true,
             autoclose: true,
             pickerPosition: 'bottom-left',
-            format: 'yyyy/mm/dd hh:ii'
+            format: 'yyyy-mm-dd'
         });
 
         // today button
         $('#kt_datetimepicker_3').datetimepicker({
             todayHighlight: true,
             autoclose: true,
-            pickerPosition: 'bottom-left',
-            todayBtn: true,
-            format: 'yyyy/mm/dd hh:ii'
+            pickerPosition: 'top-left',
+            
+            format: 'yyyy-mm-dd'
         });
         $('#kt_datetimepicker_3_modal').datetimepicker({
             todayHighlight: true,
             autoclose: true,
-            pickerPosition: 'bottom-left',
+            pickerPosition: 'top-left',
             todayBtn: true,
-            format: 'yyyy/mm/dd hh:ii'
+            format: 'yyyy-mm-dd'
         });
 
         // orientation
@@ -52,28 +52,29 @@ var KTBootstrapDatetimepicker = function () {
             todayHighlight: true,
             autoclose: true,
             pickerPosition: 'bottom-left',
-            format: 'yyyy.mm.dd hh:ii'
+            format: 'yyyy-mm-dd'
         });
 
         $('#kt_datetimepicker_4_2').datetimepicker({
             todayHighlight: true,
             autoclose: true,
             pickerPosition: 'bottom-right',
-            format: 'yyyy/mm/dd hh:ii'
+            format: 'yyyy-mm-dd'
         });
 
         $('#kt_datetimepicker_4_3').datetimepicker({
             todayHighlight: true,
             autoclose: true,
             pickerPosition: 'top-left',
-            format: 'yyyy-mm-dd hh:ii'
+            todayBtn: true,
+            format: 'yyyy-mm-dd'
         });
 
         $('#kt_datetimepicker_4_4').datetimepicker({
             todayHighlight: true,
             autoclose: true,
             pickerPosition: 'top-right',
-            format: 'yyyy-mm-dd hh:ii'
+            format: 'yyyy-mm-dd'
         });
 
         $('#kt_datetimepicker_5').datetimepicker({
@@ -85,7 +86,7 @@ var KTBootstrapDatetimepicker = function () {
         });
 
         $('#kt_datetimepicker_6').datetimepicker({
-            format: "yyyy/mm/dd",
+            format: "yyyy-mm-dd",
             todayHighlight: true,
             autoclose: true,
             startView: 2,

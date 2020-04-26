@@ -1,16 +1,10 @@
 // Class definition
 var KTTypeahead = function() {
 
-    var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
-            'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
-            'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
-            'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
-            'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
-            'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
-            'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
-            'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
-            'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
-        ];
+    var states = ['Dr. H. Kasiyarno, M.Hum.','Dr. Hj. RA.ND. Irmawati, M.Hum.','Drs.Nizam Ahzani, M.Hum','Drs.Maftukhin, M.Hum','Ulaya Ahdiani, S.S., M.Hum',
+                    'Tri Rina Budiwati, S.S, M.Hum','Dra.Ani Windarti, M.Hum','Wajiran, S.S, M.A','Ida Puspita, S.S., M.A.Res','Ajar Pradika Ananta Tur, S.S., M.A.',
+                    'M. Hafiz Kurniawan, S.S., M.A.','Hana Farida, S.S., M.A.'
+                ];
 
     // Private functions
     var demo1 = function() {
@@ -36,10 +30,10 @@ var KTTypeahead = function() {
             };
         };
 
-        $('#kt_typeahead_1, #kt_typeahead_1_modal, #kt_typeahead_1_validate, #kt_typeahead_2_validate, #kt_typeahead_3_validate').typeahead({
+        $('#kt_typeahead_1, #kt_typeahead_1_1, #kt_typeahead_1_validate, #kt_typeahead_2_validate, #kt_typeahead_3_validate').typeahead({
             hint: true,
             highlight: true,
-            minLength: 1
+            minLength: 0
         }, {
             name: 'states',
             source: substringMatcher(states)

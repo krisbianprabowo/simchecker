@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="<?php echo asset_url()?>/demo/default/base/style.css">
     <link href="<?php echo asset_url()?>/vendors/general/sweetalert2/dist/sweetalert2.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo asset_url()?>/demo/default/base/style.bundle.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="<?php echo asset_url()?>/introjs/introjs.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
@@ -53,7 +54,7 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a class="active" href="<?php echo site_url('SimCheck')?>"  style="color:#384AD7">Home</a></li>
+                                        <li><a class="active" href="<?php echo site_url('SimCheck')?>" style="color:#384AD7">Home</a></li>
                                         <li><a href="#"  style="color:#384AD7">Similarity Check<i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="<?php echo site_url('SimCheck/simcheck_title')?>"  style="color:#384AD7">&#8226; 
@@ -86,7 +87,7 @@
                         <div class="col-sm-3 col-sm-3 d-none d-lg-block">
                             <div class="log_chat_area d-flex">
                                 <div class="live_chat_btn">
-                                    <a class="boxed_btn_orange" href="<?php echo site_url('SimCheck/login')?>">
+                                    <a class="boxed_btn_orange" href="<?php echo site_url('SimCheck/login')?>"  data-step="2" data-intro="This is a tooltip!">
                                         <span style="font-family: Poppins, sans-serif;">LOGIN</span>
                                     </a>
                                 </div>
@@ -110,17 +111,18 @@
                 <div class="row align-items-center justify-content-center ">
                     <div class="col-xl-6 col-md-6">
                         <div class="slider_info">
-                            <h3 class="text-focus" style="color:#384AD7; font-family: Comfortaa, sans-serif !important; padding-top:2em;">English Literature <br>
+                            <h3 class="text-focus" style="color:#384AD7; font-family: Comfortaa, sans-serif !important; padding-top:2em;"  data-step="1" data-intro="This is a tooltip!">English Literature <br>
                                 Undergraduate<br>
                                 Program ~</h3>
                             <a href="<?php echo site_url('SimCheck/login')?>" style="font-family: Poppins, sans-serif;" class="boxed_btn">GET STARTED</a>
                         </div>
                     </div>
                     <div class="col-xl-6 col-md-6">
-                        <div class="illastrator_png">
+                        <div class="illastrator_png" data-step="3" data-intro="This is a tooltip!">
                             <img src="<?php echo asset_url()?>/media/logos/education.png">
                         </div>
                     </div>
+                    <!-- <a class="btn btn-large btn-success" href="javascript:void(0);" onclick="javascript:introJs().start();">Show me how</a> -->
                 </div>
             </div>
         </div>
@@ -132,6 +134,12 @@
     <script src="<?php echo asset_url()?>/vendors/general/jquery/dist/jquery.js" type="text/javascript"></script>
     <script src="<?php echo asset_url()?>/vendors/general/jquery/dist/jquery.slicknav.min.js" type="text/javascript"></script>
     <script src="<?php echo asset_url()?>/vendors/general/jquery/dist/main.js" type="text/javascript"></script>
+    <script src="<?php echo asset_url()?>/introjs/intro.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            introJs().start();
+        });
+    </script>
     <?php if (!empty($_GET['logout'])){
             if ($_GET['logout']=='success' and !empty($_SESSION['outlog'])){ ?>
                 <script>

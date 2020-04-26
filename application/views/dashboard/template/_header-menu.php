@@ -55,7 +55,7 @@
 				<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
 
 					<!-- begin:: Header -->
-					<div id="kt_header" class="kt-header  kt-header--fixed " data-ktheader-minimize="on" style="box-shadow: 0px 0px 9px 0px #888 !important;">
+					<div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed " data-ktheader-minimize="on" style="box-shadow: 0px 0px 9px 0px #888 !important;">
 						<div class="kt-container kt-container--fluid">
 							<!-- begin: Header Menu -->
 							<button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
@@ -95,7 +95,7 @@
 											</div>
 										</li>
 										
-										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="hover"><a href="<?php echo site_url('SimCheck/tawaran_penelitian')?>" class="kt-menu__link"><span class="kt-menu__link-text">Research&nbsp;Offer</span></a>
+										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="hover"><a href="<?php echo site_url('SimCheck/tawaran_penelitian')?>" class="kt-menu__link"><span class="kt-menu__link-text">Research&nbsp;Offers</span></a>
 										</li>
 										<?php if (isset($_SESSION['logged_in'])) {?>
 										<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="hover"><a href="<?php echo site_url('SimCheck/olah_akun')?>" class="kt-menu__link hide-menus"><span class="kt-menu__link-text">My&nbsp;Account&nbsp;(<span class="font-weight-bold"><?php echo $_SESSION['id_user']?></span>)&nbsp;</span></a>

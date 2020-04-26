@@ -147,7 +147,7 @@ class SimCheck extends CI_Controller {
 
 	public function list_penelitian_o(){
 		$d['l'] = $this->demo_model->list_penelitian_seluruh();
-		$d['datatable'] = '<script src="'.asset_url().'/app/custom/general/crud/metronic-datatable/advanced/row-details1.js" type="text/javascript"></script>';
+		$d['datatable'] = '<script src="'.asset_url().'/app/custom/general/crud/metronic-datatable/advanced/row-details1.js" type="text/javascript"></script><script src="'.asset_url().'/app/custom/general/crud/forms/widgets/bootstrap-datepicker.js"></script><script src="'.asset_url().'/app/custom/general/crud/forms/widgets/input-mask.js"></script><script src="'.asset_url().'/app/custom/general/crud/forms/widgets/bootstrap-select.js"></script><script src="'.asset_url().'/app/custom/general/crud/forms/widgets/typeahead.js"></script>';
 		$d['body'] = 'dashboard/olah/_list-penelitian-olah.php';
 		$this->load->view('dashboard/dtemplate.php',$d);
 	}

@@ -1,4 +1,5 @@
-<!-- begin::Global Config(global config for global JS sciprts) -->
+	
+	<!-- begin::Global Config(global config for global JS sciprts) -->
 		<script>
 			var KTAppOptions = {
 				"colors": {
@@ -111,6 +112,7 @@
 
 		<!--begin::Global App Bundle(used by all pages) -->
 		<script src="<?php echo asset_url()?>/app/bundle/app.bundle.js" type="text/javascript"></script>
+		
 
 		<!--end::Global App Bundle -->
 	</body>

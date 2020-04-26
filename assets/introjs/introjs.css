@@ -208,17 +208,18 @@ tr.introjs-showElement > th {
   position: relative;
   overflow: visible;
   display: inline-block;
-  padding: 0.3em 0.8em;
+  padding: 1em;
   border: 1px solid #d4d4d4;
   margin: 0;
   text-decoration: none;
-  text-shadow: 1px 1px 0 #fff;
-  font: 11px/normal sans-serif;
-  color: #333;
+  font-family: Poppins, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  color: #000;
   white-space: nowrap;
   cursor: pointer;
   outline: none;
-  background-color: #ececec;
+  background-color: #fff;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
   background-image: -moz-linear-gradient(#f4f4f4, #ececec);
   background-image: -o-linear-gradient(#f4f4f4, #ececec);
@@ -244,6 +245,9 @@ tr.introjs-showElement > th {
 
 .introjs-button:focus,
 .introjs-button:active {
+  background: #18A899 !important;
+  color: white;
+  border: 1px solid #18A899 !important;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ececec), to(#f4f4f4));
   background-image: -moz-linear-gradient(#ececec, #f4f4f4);
   background-image: -o-linear-gradient(#ececec, #f4f4f4);
@@ -259,7 +263,10 @@ tr.introjs-showElement > th {
 .introjs-skipbutton {
   box-sizing: content-box;
   margin-right: 5px;
-  color: #7a7a7a;
+  color: white;
+  font-weight: bold;
+  background: #F02E5D;
+  border: 1px solid #F02E5D !important;
 }
 
 .introjs-prevbutton {
@@ -280,6 +287,9 @@ tr.introjs-showElement > th {
   -webkit-border-radius: 0 0.2em 0.2em 0;
   -moz-border-radius: 0 0.2em 0.2em 0;
   border-radius: 0 0.2em 0.2em 0;
+  background: #18A899 ;
+  color: white;
+  border: 1px solid #18A899 ;
 }
 
 .introjs-nextbutton.introjs-fullbutton {
@@ -293,7 +303,7 @@ tr.introjs-showElement > th {
   border-color: #d4d4d4;
   box-shadow: none;
   cursor: default;
-  background-color: #f4f4f4;
+  background-color: #ded9d9;
   background-image: none;
   text-decoration: none;
 }
