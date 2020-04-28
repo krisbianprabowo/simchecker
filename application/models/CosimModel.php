@@ -14,7 +14,7 @@ class CosimModel extends CI_Model {
 	public function listPenelitian(){
 		return $this->db->get('title_coll')->result() ? : 0;
 	}
-
+	
 
 	public function list_penelitian_seluruh_a(){
 		return $this->db->get('title_coll')->result_array() ? : 0;

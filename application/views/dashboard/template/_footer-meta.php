@@ -107,7 +107,7 @@
 		<?php if(isset($datatable)) {
 			echo $datatable;}
 		?>
-		<script src="<?php echo asset_url()?>/app/custom/general/components/extended/toastr.js" type="text/javascript"></script>
+		
 		<!--end::Page Scripts -->
 
 		<!--begin::Global App Bundle(used by all pages) -->

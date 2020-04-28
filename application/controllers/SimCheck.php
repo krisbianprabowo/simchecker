@@ -34,7 +34,7 @@ class SimCheck extends CI_Controller {
 	/*public function proses_login(){
 		$username 	= $this->input->post('username',true);
 		$password 	= $this->input->post('password',true);
-		$akun = $this->system_model->check_user($username);
+		$akun = $this->system_model->checkUser($username);
 		$passwordhash	= $akun->password;
 		if (!empty($akun)){
 			
@@ -63,7 +63,7 @@ class SimCheck extends CI_Controller {
 	public function proses_login(){
 		$id_user 	= $this->input->post('username',true);
 		$password 	= $this->input->post('password',true);
-		$akun = $this->system_model->check_user($id_user);
+		$akun = $this->system_model->checkUser($id_user);
 		
 		if (!empty($akun)){
 			$passwordhash	= $akun->password;
@@ -147,7 +147,7 @@ class SimCheck extends CI_Controller {
 
 	public function list_penelitian_o(){
 		$d['l'] = $this->demo_model->list_penelitian_seluruh();
-		$d['datatable'] = '<script src="'.asset_url().'/app/custom/general/crud/metronic-datatable/advanced/row-details1.js" type="text/javascript"></script><script src="'.asset_url().'/app/custom/general/crud/forms/widgets/bootstrap-datepicker.js"></script><script src="'.asset_url().'/app/custom/general/crud/forms/widgets/input-mask.js"></script><script src="'.asset_url().'/app/custom/general/crud/forms/widgets/bootstrap-select.js"></script><script src="'.asset_url().'/app/custom/general/crud/forms/widgets/typeahead.js"></script>';
+		$d['datatable'] = '<script src="'.asset_url().'/app/custom/general/crud/metronic-datatable/advanced/row-details1.js" type="text/javascript"></script><script src="'.asset_url().'/app/custom/general/crud/forms/widgets/bootstrap-datepicker.js"></script><script src="'.asset_url().'/app/custom/general/crud/forms/widgets/input-mask.js"></script><script src="'.asset_url().'/app/custom/general/crud/forms/widgets/bootstrap-select.js"></script><script src="'.asset_url().'/app/custom/general/crud/forms/widgets/typeahead.js"></script><script src="'.asset_url().'/app/custom/general/components/extended/add-penelitian-toastr.js"></script>';
 		$d['body'] = 'dashboard/olah/_list-penelitian-olah.php';
 		$this->load->view('dashboard/dtemplate.php',$d);
 	}
@@ -165,7 +165,7 @@ class SimCheck extends CI_Controller {
 
 	public function olah_akun(){
 		if (isset($_SESSION['logged_in'])) {
-			/*$d['datatable'] = '<script src="'.asset_url().'/app/custom/general/account-manage.js" type="text/javascript"></script>';*/
+			$d['datatable'] = '<script src="'.asset_url().'/app/custom/general/components/extended/toastr.js" type="text/javascript"></script>';
 			$d['body'] = 'dashboard/olah/_akun-olah.php';
 			$this->load->view('dashboard/dtemplate.php',$d);
 		}else {
@@ -182,7 +182,7 @@ class SimCheck extends CI_Controller {
 		$chphoto  = 0;
 		$chverify = 0;
 		$status   = 0;
-		$akun = $this->system_model->check_user($id_user);
+		$akun = $this->system_model->checkUser($id_user);
 		var_dump($_FILES['photo']);
 		if(!empty($akun)){
 			if(!empty($_POST['password_baru'])){

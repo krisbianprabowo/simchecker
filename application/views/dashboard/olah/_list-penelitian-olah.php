@@ -140,41 +140,41 @@
 											</button>
 										</div>
 										<div class="modal-body">
-											<form>
+											<form form id="fadd-title">
 												<div class="form-group row">
 													<div class="col-6">
 														<label for="recipient-name" class="form-control-label">NIM:</label>
-														<input type="text" class="form-control" id="" placeholder="1500026105">
+														<input type="text" class="form-control" id="" name="NIM" placeholder="1500026105">
 													</div>
 													<div class="col-6">
 														<label for="message-text" class="form-control-label">Nama:</label>
-														<input type="text" class="form-control" id="" placeholder="Agus Budi">
+														<input type="text" class="form-control" id="" name="nama" placeholder="Agus Budi">
 													</div>
 												</div>
 												<div class="form-group">
 													<label for="message-text" class="form-control-label">Judul:</label>
-													<textarea class="form-control" id="message-text"></textarea>
+													<textarea class="form-control" id="message-text" name="judul_sebelum"></textarea>
 												</div>
 												<div class="form-group row">
 													<div class="col-6">
 														<label for="message-text" class="form-control-label">Tanggal Mulai:</label>
-														<input type="text" class="form-control" id="kt_inputmask_1" placeholder="Contoh: 23-04-2020">
+														<input type="text" class="form-control" id="kt_inputmask_1" name="tanggal_mulai" placeholder="Contoh: 23-04-2020">
 														<span class="form-text text-muted">format tanggal <code>tanggal-bulan-tahun</code> ex: <span class="font-weight-bold">23-04-2020</span></span>
 													</div>
 													<div class="col-6">
 														<label for="message-text" class="form-control-label">Semester Mulai:</label>
-														<input type="text" class="form-control" id="" placeholder="Contoh : Gasal 2020">
+														<input type="text" class="form-control" id="" name="semester_mulai" placeholder="Contoh : Gasal 2020">
 														<span class="form-text text-muted">format penulisan <code>semester tahunpelajaran</code> ex: <span class="font-weight-bold">Gasal 2020</span></span>
 													</div>
 												</div>
 												<div class="form-group row">
 													<div class="col-6">
 														<label for="message-text" class="form-control-label">Semester Selesai:</label>
-														<input type="text" class="form-control" id="" placeholder="Contoh : Genap 2020">
+														<input type="text" class="form-control" id="" name="semester_selesai" placeholder="Contoh : Genap 2020">
 													</div>
 													<div class="col-6">
 														<label for="message-text" class="form-control-label">Status Tugas Akhir:</label>
-														<select class="form-control kt-selectpicker">
+														<select class="form-control kt-selectpicker" name="status_ta">
 															<option data-content="<span class='kt-badge kt-badge--success kt-badge--inline kt-badge--rounded'>LULUS</span>">LULUS</option>
 															<option data-content="<span class='kt-badge kt-badge--warning kt-badge--inline kt-badge--rounded'>SEDANG DIKERJAKAN</span>">SEDANG DIKERJAKAN</option>
 														</select>
@@ -184,13 +184,13 @@
 													<div class="col-6">
 														<label for="message-text" class="form-control-label">Dosen Pembimbing:</label>
 														<div class="typeahead">
-															<input class="form-control" id="kt_typeahead_1" type="text" dir="ltr" placeholder="Dosen Pembimbing">
+															<input class="form-control" id="kt_typeahead_1" type="text" dir="ltr" name="dosen_pembimbing" placeholder="Dosen Pembimbing">
 														</div>
 													</div>
 													<div class="col-6">
 														<label for="message-text" class="form-control-label">Nilai:</label>
 														<!-- <input type="text" class="form-control" id="" maxlength="1"> -->
-														<select class="form-control kt-selectpicker" data-live-search='true' id="selectnilai" onchange="run()">
+														<select class="form-control kt-selectpicker" data-live-search='true' id="selectnilai" name="nilai" onchange="run()">
 															<option value="">(Belum Ada Nilai)</option>
 															<option>A</option>
 															<option>B</option>
@@ -204,20 +204,20 @@
 												<div class="form-group row">
 													<div class="col-6">
 														<label for="message-text" class="form-control-label">Tanggal Ujian:</label>
-														<input type="text" class="form-control" id="kt_inputmask_2" placeholder="Contoh: 23-04-2020">
+														<input type="text" class="form-control" id="kt_inputmask_2" name="tanggal_ujian" placeholder="Contoh: 23-04-2020">
 													</div>
 													<div class="col-6">
 														<div class="row"> 
 															<div class="col-6">
 																<label for="message-text" class="form-control-label">Penguji 1:</label>
 																<div class="typeahead">
-																	<input class="form-control" id="kt_typeahead_1_1" type="text" dir="ltr" placeholder="Dosen Penguji 1">
+																	<input class="form-control" id="kt_typeahead_1_1" type="text" dir="ltr" name="dosen_penguji1" placeholder="Dosen Penguji 1">
 																</div>
 															</div>
 															<div class="col-6">
 																<label for="message-text" class="form-control-label">Penguji 2:*</label>
 																<div class="typeahead">
-																	<input class="form-control" id="kt_typeahead_1_1" type="text" dir="ltr" placeholder="Dosen Penguji 2 (Jika Ada)">
+																	<input class="form-control" id="kt_typeahead_1_1" type="text" dir="ltr" name="dosen_penguji2" placeholder="Dosen Penguji 2 (Jika Ada)">
 																</div>
 																<span class="form-text text-muted"><code><span class="font-weight-bold">*Jika Ada</span></code> </span>
 															</div>
@@ -229,7 +229,7 @@
 										</div>
 										<div class="modal-footer">
 											<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-											<button type="button" class="btn btn-primary">Send message</button>
+											<button type="button"  class="btn btn-primary" id="btn-submit">Send message</button>
 										</div>
 									</div>
 								</div>

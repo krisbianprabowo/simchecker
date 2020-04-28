@@ -118,29 +118,6 @@
 														</div>
 													</div> 
 												</div>
-												<div class="tab-pane" id="kt_portlet_tab_2_2">
-													<div class="kt-widget3">
-														<div class="kt-widget3__item">
-															<div class="kt-widget3__header">
-																<div class="kt-widget3__info">
-																	<a href="#" class="kt-widget3__username text-primary">
-																		Belum Ada Balasan Komentar, Silahkan Jika Ingin Menambahkan Komentar Melalui Form Dibawah Ini
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="form-group">
-															<label class="col-form-label font-weight-bold"> Tambahkan Komentar </label>
-																<span class="kt-widget3__time">
-																	<small>sebagai Krisbiantoro Prabowo </small>
-																</span>
-															<textarea class="form-control" placeholder="Add a Reply..."></textarea>
-														</div>
-														<div class="kt-form__actions">
-															<button type="submit" class="btn btn-success">Submit</button>
-														</div>
-												</div>
 											</div>
 										</div>
 									</div>
@@ -188,29 +165,6 @@
 														</div>
 													</div>
 												</div>
-												<div class="tab-pane" id="kt_portlet_tab_3_2">
-													<div class="kt-widget3">
-														<div class="kt-widget3__item">
-															<div class="kt-widget3__header">
-																<div class="kt-widget3__info">
-																	<a href="#" class="kt-widget3__username text-primary">
-																		Belum Ada Balasan Komentar, Silahkan Jika Ingin Menambahkan Komentar Melalui Form Dibawah Ini
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="form-group">
-														<label class="col-form-label font-weight-bold"> Tambahkan Komentar </label>
-															<span class="kt-widget3__time">
-																<small>sebagai Krisbiantoro Prabowo </small>
-															</span>
-														<textarea class="form-control" placeholder="Add a Reply..."></textarea>
-													</div>
-													<div class="kt-form__actions">
-														<button type="submit" class="btn btn-success">Submit</button>
-													</div>
-												</div>
 											</div>
 										</div>
 									</div>
@@ -229,21 +183,21 @@
 								</button>
 							</div>
 							<div class="modal-body">
-								<form>
+								<form id="fadd-tawaran">
 									<div class="form-group">
 										<label for="message-text" class="form-control-label">Lecturer/ Professor</label>
 										<div class="typeahead">
-											<input class="form-control" id="kt_typeahead_1" type="text" dir="ltr" placeholder="Name of Lecturer/ Professor">
+											<input class="form-control" id="kt_typeahead_1" type="text" dir="ltr" placeholder="Name of Lecturer/ Professor" name="lecturer">
 										</div>
 									</div>
 									<div class="form-group">
 										<label for="message-text" class="form-control-label">Title:</label>
-										<textarea class="form-control" id="message-text"></textarea>
+										<textarea class="form-control" id="message-text" name="title"></textarea>
 									</div>
 									<div class="form-group">
 										<label for="message-text" class="form-control-label">Interest:</label>
 										<!-- <input type="text" class="form-control" id="" maxlength="1"> -->
-										<select class="form-control kt-selectpicker"  id="selectnilai" onchange="run()">
+										<select class="form-control kt-selectpicker"  id="selectnilai" onchange="run()" name="interest">
 											<option>American Studies</option>
 											<option>Literatures</option>
 											<option>Linguistics</option>
@@ -252,14 +206,14 @@
 									</div>
 									<div class="form-group">
 										<label for="message-text" class="form-control-label">Notes:</label>
-										<textarea class="form-control" id="message-text" placeholder="Add Some Notes..."></textarea>
+										<textarea class="form-control" id="message-text" placeholder="Add Some Notes..." name="notes"></textarea>
 									</div>
 									
 								</form>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-								<button type="button" class="btn btn-primary">Send message</button>
+								<button class="btn btn-primary" id="submit-tawaran">Send message</button>
 							</div>
 						</div>
 					</div>
