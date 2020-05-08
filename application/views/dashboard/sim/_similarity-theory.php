@@ -37,7 +37,7 @@
 													<input type="file" class="custom-file-input" id="customFile" name="title">
 													<label class="custom-file-label" for="customFile">Choose file</label>
 												</div>
-
+												
 											</div>
 										</div>
 										<div class="kt-portlet__foot">
@@ -46,7 +46,7 @@
 													Click "Start" to begin the process
 												</div>
 												<div class="col-lg-4 kt-align-right">
-													<button type="submit" class="btn btn-success">START</button>
+													<button type="submit" class="btn btn-success btn-pill btn-elevate btn-icon-sm">START</button>
 												</div>
 											</div>
 										</div>

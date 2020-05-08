@@ -13,9 +13,8 @@ var KTDatatableRemoteAjaxDemo = function() {
 				type: 'remote',
 				source: {
 					read: {
-						url: 'https://keenthemes.com/metronic/themes/themes/metronic/dist/preview/inc/api/datatables/demos/default.php',
+						url: 'https://localhost/simchecker/datatables/demos/default.php',
 						// sample custom headers
-						headers: {'x-my-custokt-header': 'some value', 'x-test-header': 'the value'},
 						map: function(raw) {
 							// sample data mapping
 							var dataSet = raw;
@@ -26,17 +25,13 @@ var KTDatatableRemoteAjaxDemo = function() {
 						},
 					},
 				},
-				pageSize: 10,
+				pageSize: 20,
 				serverPaging: true,
 				serverFiltering: true,
 				serverSorting: true,
 			},
 
 			// layout definition
-			layout: {
-				scroll: false,
-				footer: false,
-			},
 
 			// column sorting
 			sortable: true,
