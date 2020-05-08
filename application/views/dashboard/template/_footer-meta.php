@@ -107,7 +107,6 @@
 		<?php if(isset($datatable)) {
 			echo $datatable;}
 		?>
-		
 		<!--end::Page Scripts -->
 
 		<!--begin::Global App Bundle(used by all pages) -->

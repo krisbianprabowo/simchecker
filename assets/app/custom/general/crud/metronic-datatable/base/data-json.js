@@ -11,7 +11,7 @@ var KTDatatableJsonRemoteDemo = function () {
 			// datasource definition
 			data: {
 				type: 'remote',
-				source: 'https://keenthemes.com/metronic/themes/themes/metronic/dist/preview/inc/api/datatables/datasource/default.json',
+				source: 'https://localhost/simchecker/datatables/datasource/default.json',
 				pageSize: 10,
 			},
 
@@ -97,9 +97,9 @@ var KTDatatableJsonRemoteDemo = function () {
 					template: function() {
 						return '\
 						<div class="dropdown">\
-							<a href="javascript:;" class="btn btn-sm btn-clean btn-icon btn-icon-md" data-toggle="dropdown">\
+							<button class="btn btn-sm btn-clean btn-icon" id="btn-edit" title="Edit details" data-toggle="modal" data-target="#kt_modal_4">\
                                 <i class="la la-ellipsis-h"></i>\
-                            </a>\
+                            </button>\
 						  	<div class="dropdown-menu dropdown-menu-right">\
 						    	<a class="dropdown-item" href="#"><i class="la la-edit"></i> Edit Details</a>\
 						    	<a class="dropdown-item" href="#"><i class="la la-leaf"></i> Update Status</a>\

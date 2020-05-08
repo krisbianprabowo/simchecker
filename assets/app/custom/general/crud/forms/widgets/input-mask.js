@@ -5,12 +5,12 @@ var KTInputmask = function () {
     // Private functions
     var demos = function () {
         // date format
-        $("#kt_inputmask_1").inputmask("99-99-9999", {
+        $(".kt_inputmask_1").inputmask("99-99-9999", {
             "placeholder": "dd-mm-yyyy"
         });
 
         // custom placeholder        
-        $("#kt_inputmask_2").inputmask("99-99-9999", {
+        $(".kt_inputmask_2").inputmask("99-99-9999", {
             "placeholder": "dd-mm-yyyy"
         });
         // phone number format
