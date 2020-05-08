@@ -36,7 +36,7 @@
 													Click "Start" to begin the process
 												</div>
 												<div class="col-lg-4 kt-align-right">
-													<button type="submit" class="btn btn-success btn-pill btn-elevate btn-icon-sm" id="start-check" >START</button>
+													<button type="submit" class="btn btn-success" id="start-check" >START</button>
 												</div>
 											</div>
 										</div>

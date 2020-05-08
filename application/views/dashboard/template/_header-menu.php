@@ -18,7 +18,7 @@
 				</div>
 				<div class="kt-header-mobile__toolbar">
 					<!-- <button class="kt-header-mobile__toolbar-toggler kt-header-mobile__toolbar-toggler--left" id="kt_aside_mobile_toggler"><span></span></button> -->
-					<a href="<?php echo site_url('SimCheck/olah_akun')?>" ><img class="kt-header-mobile__toolbar-toggler" style="width: 2.9rem; height: 2.9rem; border-radius: 50% !important;"src="<?php echo asset_url().$_SESSION['photo_user']?>" ></a>
+					<a href="<?php echo site_url('SimCheck/olah_akun')?>" ><img class="kt-header-mobile__toolbar-toggler" style="width: 2.9rem; height: 2.9rem"src="<?php echo asset_url().$_SESSION['photo_user']?>" ></a>
 					<button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
 				</div>
 			</div>
@@ -164,7 +164,7 @@
 										
 											<span class="kt-header__topbar-welcome kt-visible-desktop">Hi,</span>
 											<span class="kt-header__topbar-username kt-visible-desktop"><?php echo $_SESSION['id_user']?></span>
-											<img alt="Pic" src="<?php echo asset_url().$_SESSION['photo_user']?>" style="width: 50px; height: 50px; border-radius: 50% !important" />
+											<img alt="Pic" src="<?php echo asset_url().$_SESSION['photo_user']?>" />
 										
 										<!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
 										<span class="kt-badge kt-badge--username kt-badge--unified-success kt-badge--lg kt-badge--rounded kt-badge--bold kt-hidden">S</span>
@@ -174,7 +174,7 @@
 										<!--begin: Head -->
 										<div class="kt-user-card kt-user-card--skin-light kt-notification-item-padding-x">
 											<div class="kt-user-card__avatar">
-												<img class="kt-hidden-" alt="Pic"  style="border-radius: 50% !important" src="<?php echo asset_url().$_SESSION['photo_user']?>" />
+												<img class="kt-hidden-" alt="Pic" src="<?php echo asset_url().$_SESSION['photo_user']?>" />
 
 												<!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
 												<span class="kt-badge kt-badge--username kt-badge--unified-success kt-badge--lg kt-badge--rounded kt-badge--bold kt-hidden">S</span>

@@ -12,7 +12,7 @@ class CosimModel extends CI_Model {
 	}
 
 	public function listPenelitian(){
-		return $this->db->get('title_train')->result() ? : 0;
+		return $this->db->get('title_coll')->result() ? : 0;
 	}
 	
 

@@ -30,7 +30,7 @@ var KTTypeahead = function() {
             };
         };
 
-        $('#kt_typeahead_1, #kt_typeahead_1_1, #kt_typeahead_1_2, #kt_typeahead_1_validate, #kt_typeahead_2_validate, #kt_typeahead_3_validate').typeahead({
+        $('#kt_typeahead_1, #kt_typeahead_1_1, #kt_typeahead_1_validate, #kt_typeahead_2_validate, #kt_typeahead_3_validate').typeahead({
             hint: true,
             highlight: true,
             minLength: 0

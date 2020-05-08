@@ -37,6 +37,7 @@ var KTBootstrapDatepicker = function () {
         $('#kt_datepicker_2, #kt_datepicker_2_validate').datepicker({
             rtl: KTUtil.isRTL(),
             todayHighlight: true,
+            orientation: "bottom left",
             templates: arrows
         });
 

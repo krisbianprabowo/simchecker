@@ -47,7 +47,6 @@ var Alert = function() {
 }();
 
 
-
 // Class Initialization
 jQuery(document).ready(function() {
     Alert.init();

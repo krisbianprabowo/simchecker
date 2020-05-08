@@ -12,7 +12,6 @@ class SimCheck extends CI_Controller {
 		$this->load->library('session');
 		$this->load->library('form_validation');
 		$this->load->library('pdf2text');
-		$this->load->library('pagination');
 		$this->load->helper('form');
 		$this->load->helper('utility');
 		$this->load->helper('convertAlphabet');
@@ -73,8 +72,8 @@ class SimCheck extends CI_Controller {
 				$data_session = array(	'level' => 'admin',
 										'id_user'=>$akun->id_user,
 										'photo_user'=>$akun->photo,
-										/*'username'=>$akun->username,*/
-										'nama'=>'dosen S.S, M.Hum.',
+										/*'username'=>$akun->username,
+										'nama'=>$akun->nama,*/
 										'logged_in' => TRUE
 										);
 				$this->session->set_userdata($data_session);
@@ -133,37 +132,7 @@ class SimCheck extends CI_Controller {
 	}
 
 	public function tawaran_penelitian(){
-		$config	= array();
-		$config['base_url']	= base_url('SimCheck/tawaran_penelitian');
-		$config['total_rows'] = $this->system_model->countTawaran();
-		$config['per_page']	= 3;
-		$config['uri_segment'] =3;
-		/*$choice = $config['total_rows'] / $config['per_page'];
-		$config['num_links'] = floor($choice);*/
-
-		$config['first_link']       = '<i class="flaticon2-fast-back" style="font-size:0.85em"></i>';
-        $config['last_link']        = '<i class="flaticon2-fast-next" style="font-size:0.85em"></i>';
-        $config['next_link']        = '<i class="flaticon2-next" style="font-size:0.85em"></i>';
-        $config['prev_link']        = '<i class="flaticon2-back" style="font-size:0.85em"></i>';
-        $config['full_tag_open']    = '<div class="pagging text-center"><nav><ul class="pagination justify-content-center">';
-        $config['full_tag_close']   = '</ul></nav></div>';
-        $config['num_tag_open']     = '<li class="page-item"><span class="page-link" style="padding:7px 13px;margin:3px;font-weight:600">';
-        $config['num_tag_close']    = '</span></li>';
-        $config['cur_tag_open']     = '<li class="page-item active"><span class="page-link"  style="padding:7px 13px;margin:3px;font-weight:600;background-color:#591DF1 !important;border-color:#591DF1">';
-        $config['cur_tag_close']    = '<span class="sr-only">(current)</span></span></li>';
-        $config['next_tag_open']    = '<li class="page-item"><span class="page-link" style="padding:7px 11px;margin:3px;background-color:#f0f3ff;">';
-        $config['next_tagl_close']  = '<span aria-hidden="true">&raquo;</span></span></li>';
-        $config['prev_tag_open']    = '<li class="page-item"><span class="page-link" style="padding:7px 11px;margin:3px;;background-color:#f0f3ff;">';
-        $config['prev_tagl_close']  = '</span>Next</li>';
-        $config['first_tag_open']   = '<li class="page-item"><span class="page-link" style="padding:7px 11px;margin:3px;;background-color:#f0f3ff;">';
-        $config['first_tagl_close'] = '</span></li>';
-        $config['last_tag_open']    = '<li class="page-item"><span class="page-link" style="padding:7px 11px;margin:3px;;background-color:#f0f3ff;">';
-        $config['last_tagl_close']  = '</span></li>';
-		$this->pagination->initialize($config);
-		$d['page']	= ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
-		$d['data'] 	= $this->system_model->selectTawaranP($config['per_page'],$d['page']);
-		$d['pagination'] = $this->pagination->create_links();
-		$d['body'] 	= 'dashboard/sim/_tawaran-penelitian.php';
+		$d['body'] = 'dashboard/sim/_tawaran-penelitian.php';
 		$this->load->view('dashboard/dtemplate.php',$d);
 	}
 
@@ -177,7 +146,7 @@ class SimCheck extends CI_Controller {
 	}
 
 	public function list_penelitian_o(){
-		$d['l'] = $this->CosimModel->listPenelitian();
+		$d['l'] = $this->demo_model->list_penelitian_seluruh();
 		$d['datatable'] = '<script src="'.asset_url().'/app/custom/general/crud/metronic-datatable/advanced/row-details1.js" type="text/javascript"></script><script src="'.asset_url().'/app/custom/general/crud/forms/widgets/bootstrap-datepicker.js"></script><script src="'.asset_url().'/app/custom/general/crud/forms/widgets/input-mask.js"></script><script src="'.asset_url().'/app/custom/general/crud/forms/widgets/bootstrap-select.js"></script><script src="'.asset_url().'/app/custom/general/crud/forms/widgets/typeahead.js"></script><script src="'.asset_url().'/app/custom/general/components/extended/add-penelitian-toastr.js"></script>';
 		$d['body'] = 'dashboard/olah/_list-penelitian-olah.php';
 		$this->load->view('dashboard/dtemplate.php',$d);
@@ -214,6 +183,7 @@ class SimCheck extends CI_Controller {
 		$chverify = 0;
 		$status   = 0;
 		$akun = $this->system_model->checkUser($id_user);
+		var_dump($_FILES['photo']);
 		if(!empty($akun)){
 			if(!empty($_POST['password_baru'])){
 				$pass = $this->input->post('password_baru');
@@ -238,7 +208,7 @@ class SimCheck extends CI_Controller {
 					move_uploaded_file($_FILES["photo"]["tmp_name"], $target_dir.$target_file);
 					$url_image = "/media/users/".$target_file;
 					$d['photo'] = $url_image;
-					$status = $this->system_model->updateUser($id_user,$d);
+					$status = $this->system_model->update_acc($id_user,$d);
 					echo (($status > 0)? "success" : "failed" );
 					if ($status > 0){
 						$_SESSION['photo_user'] = $url_image;
@@ -254,7 +224,7 @@ class SimCheck extends CI_Controller {
 							move_uploaded_file($_FILES["photo"]["tmp_name"], $target_dir.$target_file);
 							$url_image = "/media/users/".$target_file;
 							$d['photo'] = $url_image;
-							$status = $this->system_model->updateUser($id_user,$d);
+							$status = $this->system_model->update_acc($id_user,$d);
 							echo (($status > 0)? "success" : "failed" );
 							if ($status > 0){
 								$_SESSION['photo_user'] = $url_image;
@@ -264,7 +234,7 @@ class SimCheck extends CI_Controller {
 						}
 					}elseif ($chverify ==1){
 						/*$d['photo'] = "/media/users/default.jpg";*/
-						$status = $this->system_model->updateUser($id_user, $d);
+						$status = $this->system_model->update_acc($id_user, $d);
 						echo (($status > 0)? "success" : "failed" );
 					}else{
 						echo "failed";
@@ -292,6 +262,7 @@ class SimCheck extends CI_Controller {
 				echo "berhasil";
 			else
 				echo "gagal";
+			
 		}
 	}
 

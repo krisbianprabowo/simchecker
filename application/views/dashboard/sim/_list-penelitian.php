@@ -5,7 +5,7 @@
 							<div class="kt-portlet__head">
 								<div class="kt-portlet__head-label">
 									<span class="kt-portlet__head-icon">
-										<i class="flaticon2-paper h2 text-primary"></i>
+										<i class="flaticon2-list-3 h2 text-primary"></i>
 									</span>
 									<h3 class="kt-portlet__head-title">
 										Research List <?php echo $datatable;?>
@@ -25,7 +25,7 @@
 													<div class="row align-items-center">
 														<div class="col-md-12 kt-margin-b-20-tablet-and-mobile">
 															<div class="kt-input-icon kt-input-icon--left">
-																<input type="text" class="form-control search-input" placeholder="Search..." id="generalSearch">
+																<input type="text" class="form-control" placeholder="Search..." id="generalSearch">
 																<span class="kt-input-icon__icon kt-input-icon__icon--left">
 																	<span><i class="la la-search"></i></span>
 																</span>

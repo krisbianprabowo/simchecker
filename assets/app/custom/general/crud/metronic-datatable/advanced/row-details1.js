@@ -33,34 +33,30 @@ var KTDatatableAutoColumnHideDemo = function() {
 			columns: [
 				{
 					field: 'No',
-					autoHide: false,
-					width:40,
-					sortable: 'desc'
+					title: 'No',
+					width: 40,
 				}, {
 					field: 'NIM',
-					width:80,
-					sortable: 'desc'
+					sortable: 'desc',
 				}, {
 					field: 'Name',
-					width: 140
+					autoHide: false
 				}, {
 					field: 'Title',
 					autoHide: false
 				}, {
-					field: 'Judul',
-					autoHide: false,
-					width: 100,
+					field: 'Dosen Penguji',
 				}, {
 					field: 'Finished on',
 					type: 'date',
 					format: 'DD-MM-YYYY',
-					width: 130,
+					width: 100,
 				}, {
-					field: 'Aksi',
-					sortable: false,
-					width: 75,
-					overflow: 'visible',
-					autoHide: false,
+					field: 'TotalPayment',
+					title: 'Payment',
+				}, {
+					field: 'Bab 2',
+					width: 'auto',
 				}, /*{
 					field: 'Status',
 					title: 'Status',
@@ -91,8 +87,8 @@ var KTDatatableAutoColumnHideDemo = function() {
 								status[row.Type].title + '</span>';
 					},
 				},*/ {
-					field: 'Aksis',
-					title: 'Aksis',
+					field: 'Aksi',
+					title: 'Aksi',
 					sortable: false,
 					width: 110,
 					overflow: 'visible',
