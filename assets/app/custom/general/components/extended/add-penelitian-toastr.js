@@ -76,9 +76,12 @@ var KTToastrDemo = function() {
                 success: function(response){
                     console.log(response);
                     if (response == "success") {
-                        toastr.success('Account Succesfully Updated!');
+                        toastr.success('Title Succesfully Added');
+                        setTimeout(function() {
+                            $("#btn-pclose")[0].click();
+                        }, 1100);
                     }else{
-                        toastr.error('Failed to Update Your Account!<br> Password might be wrong or Photo Size is too big');
+                        toastr.error('Error occured!<br> There is something went wrong, Please Try Again');
                     }
 
                 }
@@ -149,12 +152,12 @@ var AlertEdit = function() {
                 success: function(response){
                     console.log(response);
                     if (response == "success") {
-                        toastr.success('Title information Succesfully Updated!');
+                        toastr.success('Title Information Succesfully Updated!');
                         setTimeout(function() {
-                            location.reload();
+                            window.location.href = "https://localhost/simchecker/Dosection/list_penelitian_o";
                         }, 1800);
                     }else{
-                        toastr.error('Failed to Update!<br> Password might be wrong or Photo Size is too big');
+                        toastr.error('Error occured!<br> There is something went wrong, Please Try Again');
                     }
 
                 }
@@ -213,12 +216,12 @@ var AlertDelete = function() {
                 success: function(response){
                     console.log(response);
                     if (response == "success") {
-                        toastr.success('Account Succesfully Removed!');
+                        toastr.success('Title information Succesfully Updated!');
                         setTimeout(function() {
-                            location.reload();
+                            window.location.href = "https://localhost/simchecker/Dosection/list_penelitian_o";
                         }, 1800);
                     }else{
-                        toastr.error('Failed to Update !<br> Password might be wrong or Photo Size is too big');
+                        toastr.error('Error occured!<br> There is something went wrong, Please Try Again');
                     }
 
                 }

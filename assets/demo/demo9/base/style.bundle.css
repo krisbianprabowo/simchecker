@@ -5593,6 +5593,13 @@ button.bg-dark:focus {
     display: -ms-inline-flexbox !important;
     display: inline-flex !important; } }
 
+@media (min-width: 1025px) {
+  .d-lgx-none {
+    display: none !important; }
+  .d-lgx-block {
+    display: block !important; }
+}
+
 @media (min-width: 1399px) {
   .d-xl-none {
     display: none !important; }
@@ -17300,7 +17307,9 @@ canvas {
   .kt-padding-l-100-desktop {
     padding-left: 100px !important; }
   .kt-padding-r-100-desktop {
-    padding-right: 100px !important; } }
+    padding-right: 100px !important; }
+  .kt-margin-b-130-desktop {
+    margin-bottom: 137px !important; } }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .kt-margin-0-tablet {

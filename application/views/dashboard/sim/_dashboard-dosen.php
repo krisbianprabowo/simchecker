@@ -7,7 +7,7 @@
 									<div class="kt-portlet__head">
 										<div class="kt-portlet__head-label">
 											<span class="kt-portlet__head-icon">
-												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--danger" style="width: 31px !important;height: 31px !important">
+												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--brand" style="width: 31px !important;height: 31px !important">
 									        	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 											        <rect id="bound" x="0" y="0" width="24" height="24"/>
 											        <path d="M2.56066017,10.6819805 L4.68198052,8.56066017 C5.26776695,7.97487373 6.21751442,7.97487373 6.80330086,8.56066017 L8.9246212,10.6819805 C9.51040764,11.267767 9.51040764,12.2175144 8.9246212,12.8033009 L6.80330086,14.9246212 C6.21751442,15.5104076 5.26776695,15.5104076 4.68198052,14.9246212 L2.56066017,12.8033009 C1.97487373,12.2175144 1.97487373,11.267767 2.56066017,10.6819805 Z M14.5606602,10.6819805 L16.6819805,8.56066017 C17.267767,7.97487373 18.2175144,7.97487373 18.8033009,8.56066017 L20.9246212,10.6819805 C21.5104076,11.267767 21.5104076,12.2175144 20.9246212,12.8033009 L18.8033009,14.9246212 C18.2175144,15.5104076 17.267767,15.5104076 16.6819805,14.9246212 L14.5606602,12.8033009 C13.9748737,12.2175144 13.9748737,11.267767 14.5606602,10.6819805 Z" id="Combined-Shape" fill="#000000" opacity="0.3"/>
@@ -39,6 +39,7 @@
 													</button>
 												</div>
 											</div>
+											<div id="chart-penelitian"></div>
 											<!--begin::Portlet-->
 											<div class="kt-portlet">
 												<div class="kt-portlet__head">
@@ -52,11 +53,12 @@
 											        		</svg>
 														</span>
 														<h3 class="kt-portlet__head-title">
-															Your Summary Test Of Similarity Checks.
+															My Summary Test Of Similarity Checks.
 														</h3>
 													</div>
 												</div>
 												<div class="kt-portlet__body">
+
 													<span class="text-danger font-weight-bold">*(dummy data displayed below)</span>
 													<ul style="font-weight:400;">
 														<li>
@@ -84,7 +86,7 @@
 															</svg>
 														</span>
 														<h3 class="kt-portlet__head-title">
-															Latest Research Offer
+															My Latest Research Offer
 														</h3>
 													</div>
 												</div>
@@ -132,31 +134,29 @@
 										<!--begin::Nav-->
 										<div class="kt-grid-nav">
 											<div class="kt-grid-nav__row">
-												<a href="#" class="kt-grid-nav__item">
-													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success" style="width: 31px !important;height: 31px !important">
-										        		<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+												<a href="<?php echo site_url('Dosection/add_tawaran')?>" class="kt-grid-nav__item">
+													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--info" style="width: 31px !important;height: 31px !important">
+												        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 													        <rect id="bound" x="0" y="0" width="24" height="24"/>
-													        <rect id="Combined-Shape" fill="#000000" opacity="0.3" x="2" y="3" width="20" height="18" rx="2"/>
-													        <path d="M9.9486833,13.3162278 C9.81256925,13.7245699 9.43043041,14 9,14 L5,14 C4.44771525,14 4,13.5522847 4,13 C4,12.4477153 4.44771525,12 5,12 L8.27924078,12 L10.0513167,6.68377223 C10.367686,5.73466443 11.7274983,5.78688777 11.9701425,6.75746437 L13.8145063,14.1349195 L14.6055728,12.5527864 C14.7749648,12.2140024 15.1212279,12 15.5,12 L19,12 C19.5522847,12 20,12.4477153 20,13 C20,13.5522847 19.5522847,14 19,14 L16.118034,14 L14.3944272,17.4472136 C13.9792313,18.2776054 12.7550291,18.143222 12.5298575,17.2425356 L10.8627389,10.5740611 L9.9486833,13.3162278 Z" id="Path-108" fill="#000000" fill-rule="nonzero"/>
-													        <circle id="Oval" fill="#000000" opacity="0.3" cx="19" cy="6" r="1"/>
+													        <path d="M3,16 L5,16 C5.55228475,16 6,15.5522847 6,15 C6,14.4477153 5.55228475,14 5,14 L3,14 L3,12 L5,12 C5.55228475,12 6,11.5522847 6,11 C6,10.4477153 5.55228475,10 5,10 L3,10 L3,8 L5,8 C5.55228475,8 6,7.55228475 6,7 C6,6.44771525 5.55228475,6 5,6 L3,6 L3,4 C3,3.44771525 3.44771525,3 4,3 L10,3 C10.5522847,3 11,3.44771525 11,4 L11,19 C11,19.5522847 10.5522847,20 10,20 L4,20 C3.44771525,20 3,19.5522847 3,19 L3,16 Z" id="Combined-Shape" fill="#000000" opacity="0.3"/>
+													        <path d="M16,3 L19,3 C20.1045695,3 21,3.8954305 21,5 L21,15.2485298 C21,15.7329761 20.8241635,16.200956 20.5051534,16.565539 L17.8762883,19.5699562 C17.6944473,19.7777745 17.378566,19.7988332 17.1707477,19.6169922 C17.1540423,19.602375 17.1383289,19.5866616 17.1237117,19.5699562 L14.4948466,16.565539 C14.1758365,16.200956 14,15.7329761 14,15.2485298 L14,5 C14,3.8954305 14.8954305,3 16,3 Z" id="Rectangle-102-Copy" fill="#000000"/>
 													    </g>
 													</svg>
-													<span class="h6 kt-grid-nav__title text-primary" style="font-size: 1em !important">SimCheck : Title</span>
+													<span class="h6 kt-grid-nav__title text-primary" style="font-size: 1em !important">Offer A Research</span>
 												</a>
-												<a href="#" class="kt-grid-nav__item">
+												<a href="<?php echo site_url('Dosection/list_user')?>" class="kt-grid-nav__item">
 													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--danger" style="width: 31px !important;height: 31px !important">
-										        		<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-													        <rect id="bound" x="0" y="0" width="24" height="24"/>
-													        <rect id="Combined-Shape" fill="#000000" opacity="0.3" x="2" y="3" width="20" height="18" rx="2"/>
-													        <path d="M9.9486833,13.3162278 C9.81256925,13.7245699 9.43043041,14 9,14 L5,14 C4.44771525,14 4,13.5522847 4,13 C4,12.4477153 4.44771525,12 5,12 L8.27924078,12 L10.0513167,6.68377223 C10.367686,5.73466443 11.7274983,5.78688777 11.9701425,6.75746437 L13.8145063,14.1349195 L14.6055728,12.5527864 C14.7749648,12.2140024 15.1212279,12 15.5,12 L19,12 C19.5522847,12 20,12.4477153 20,13 C20,13.5522847 19.5522847,14 19,14 L16.118034,14 L14.3944272,17.4472136 C13.9792313,18.2776054 12.7550291,18.143222 12.5298575,17.2425356 L10.8627389,10.5740611 L9.9486833,13.3162278 Z" id="Path-108" fill="#000000" fill-rule="nonzero"/>
-													        <circle id="Oval" fill="#000000" opacity="0.3" cx="19" cy="6" r="1"/>
+													    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+													        <polygon id="Shape" points="0 0 24 0 24 24 0 24"/>
+													        <path d="M18,14 C16.3431458,14 15,12.6568542 15,11 C15,9.34314575 16.3431458,8 18,8 C19.6568542,8 21,9.34314575 21,11 C21,12.6568542 19.6568542,14 18,14 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" id="Combined-Shape" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+													        <path d="M17.6011961,15.0006174 C21.0077043,15.0378534 23.7891749,16.7601418 23.9984937,20.4 C24.0069246,20.5466056 23.9984937,21 23.4559499,21 L19.6,21 C19.6,18.7490654 18.8562935,16.6718327 17.6011961,15.0006174 Z M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" id="Combined-Shape" fill="#000000" fill-rule="nonzero"/>
 													    </g>
 													</svg>
-													<span class="kt-grid-nav__title text-primary" style="font-size: 1em !important">SimCheck : Theory</span>
+													<span class="kt-grid-nav__title text-primary" style="font-size: 1em !important">User List</span>
 												</a>
 											</div>
 											<div class="kt-grid-nav__row">
-												<a href="#" class="kt-grid-nav__item">
+												<a href="<?php echo site_url('SimCheck/olah_akun')?>" class="kt-grid-nav__item">
 													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--warning" style="width: 31px !important;height: 31px !important">
 										        		<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 									        		        <rect id="bound" x="0" y="0" width="24" height="24"/>
@@ -165,7 +165,7 @@
 									        		</svg>
 													<span class="kt-grid-nav__title text-primary" style="font-size: 1em !important">Manage Account</span>
 												</a>
-												<a href="#" class="kt-grid-nav__item">
+												<a href="<?php echo site_url('SimCheck/list_penelitian')?>" class="kt-grid-nav__item">
 													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--info" style="width: 31px !important;height: 31px !important">
 										        		<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 									        		        <rect id="bound" x="0" y="0" width="24" height="24"/>
@@ -215,15 +215,16 @@
 												 Click <span class="btn-success">&nbsp;Start&nbsp;</span> button to begin the proccess of Similarity Check.
 											</li>
 											<li>
-												Kindly wait until the page is successfully refreshed.
+												If you wanted to offer a research, Head over to 'Offer A Research' menu or by using shortcut navigation.
 											</li>
 											<li>
-												If it <span style="color : #28a745;font-weight: bold">success</span>, The page will show the result of your similarity check with the detailed information.
+												You can change your password or avatar profiles just by heading to 'Manage Account' menu.
 											</li>
 											<li>
-												If some <span style="color : #dc3545;font-weight: bold">errors</span> occurs, You will get notified and you might need to start back from the 1st step.
+												Any Research done or still going by students were listed on 'Research List'.
 											</li>
-										</ol>									</div>
+										</ol>									
+									</div>
 								</div>
 
 							</div>

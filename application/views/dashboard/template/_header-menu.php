@@ -11,7 +11,7 @@
 		<?php if (isset($_SESSION['logged_in'])) {?>
 			<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed " style="box-shadow: 0px 0px 9px 0px #888 !important;">
 				<div class="kt-header-mobile__logo">
-					<a href="index.html">
+					<a href="<?php echo site_url() ?>">
 						<!-- <img alt="Logo" src="<?php echo asset_url()?>/media/logos/logo-9-sm.png" /> -->
 						<span class="h3">ENGLISH LITERATURE</span>
 					</a>
@@ -25,7 +25,7 @@
 		<?php } else {?>
 			<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed " style="box-shadow: 0px 0px 9px 0px #888 !important;">
 				<div class="kt-header-mobile__logo">
-					<a href="index.html">
+					<a href="<?php echo site_url() ?>">
 						<!-- <img alt="Logo" src="<?php echo asset_url()?>/media/logos/logo-9-sm.png" /> -->
 						<span class="h3">ENGLISH LITERATURE</span>
 					</a>
@@ -113,8 +113,8 @@
 							<!-- end: Header Menu -->
 
 							<!-- begin:: Brand -->
-							<div class="kt-header__brand   kt-grid__item" id="kt_header_brand">
-								<a class="kt-header__brand-logo" href="index.html">
+							<div class="kt-header__brand kt-grid__item" id="kt_header_brand">
+								<a class="kt-header__brand-logo kt-margin-l-100-desktop" href="<?php echo site_url() ?>">
 									<!-- <img alt="Logo" src="<?php echo asset_url()?>/media/logos/logo-9.png" /> -->
 									<span class="h2">ENGLISH LITERATURE</span>
 								</a>

@@ -130,7 +130,7 @@
 									<!--begin::Action-->
 									<div class="kt-login__actions">
 										<div class="form-group">
-											<button class="btn btn-brand btn-elevate kt-login__btn-primary" id="btn-login">Sign In</button>
+											<button class="btn btn-brand btn-pill btn-elevate kt-login__btn-primary" id="btn-login">Sign In</button>
 										</div>
 									</div>
 

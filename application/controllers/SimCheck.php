@@ -28,6 +28,15 @@ class SimCheck extends CI_Controller {
 		$this->load->view('dashboard/dtemplate.php', $d);
 	}
 
+	public function dshbrd_dsn(){
+		$d['datatable'] = '<script src="'.asset_url().'/graph_js/fusioncharts.js"></script>
+							<script src="'.asset_url().'/graph_js/fusioncharts.charts.js"></script>
+							<script src="'.asset_url().'/graph_js/themes/fusioncharts.theme.ocean.js"></script>
+							<script src="'.asset_url().'/graph_js/graphpenelitian.js"></script>';
+		$d['body'] = 'dashboard/sim/_dashboard-dosen.php';
+		$this->load->view('dashboard/dtemplate.php', $d);
+	}
+
 	public function login(){
 		$this->load->view('dashboard/sim/_login-page.php');
 	}
@@ -70,7 +79,7 @@ class SimCheck extends CI_Controller {
 			$passwordhash	= $akun->password;
 			$verify = verifyHashedPassword($password,$passwordhash);
 			if($verify == TRUE){
-				$data_session = array(	'level' => 'admin',
+				$data_session = array(	'role' => 'admin',
 										'id_user'=>$akun->id_user,
 										'photo_user'=>$akun->photo,
 										/*'username'=>$akun->username,*/
@@ -86,6 +95,8 @@ class SimCheck extends CI_Controller {
 			echo "failed";
 		}
 	}
+
+
 
 	public function logout(){
 		$this->session->sess_destroy();
@@ -136,7 +147,7 @@ class SimCheck extends CI_Controller {
 		$config	= array();
 		$config['base_url']	= base_url('SimCheck/tawaran_penelitian');
 		$config['total_rows'] = $this->system_model->countTawaran();
-		$config['per_page']	= 3;
+		$config['per_page']	= 5;
 		$config['uri_segment'] =3;
 		/*$choice = $config['total_rows'] / $config['per_page'];
 		$config['num_links'] = floor($choice);*/
@@ -176,15 +187,15 @@ class SimCheck extends CI_Controller {
 		$this->load->view('dashboard/dtemplate.php',$d);
 	}
 
-	public function list_penelitian_o(){
-		$d['l'] = $this->CosimModel->listPenelitian();
-		$d['datatable'] = '<script src="'.asset_url().'/app/custom/general/crud/metronic-datatable/advanced/row-details1.js" type="text/javascript"></script><script src="'.asset_url().'/app/custom/general/crud/forms/widgets/bootstrap-datepicker.js"></script><script src="'.asset_url().'/app/custom/general/crud/forms/widgets/input-mask.js"></script><script src="'.asset_url().'/app/custom/general/crud/forms/widgets/bootstrap-select.js"></script><script src="'.asset_url().'/app/custom/general/crud/forms/widgets/typeahead.js"></script><script src="'.asset_url().'/app/custom/general/components/extended/add-penelitian-toastr.js"></script>';
-		$d['body'] = 'dashboard/olah/_list-penelitian-olah.php';
-		$this->load->view('dashboard/dtemplate.php',$d);
-	}
-
 	public function generate_dataset(){
-
+		$d['datatable'] ='<script src="'.asset_url().'/app/custom/general/components/extended/modal-generate.js"></script>';
+		if(isset($_SESSION['tips2']) and $_SESSION['tips2'] =='1'){
+			$d['guidetips'] ='<script type="text/javascript">
+					        $(document).ready(function(){
+					            introJs().start();
+					        });
+					    </script>';
+		}
 		$d['body'] = 'dashboard/olah/_generate-dataset.php'; 
 		$this->load->view('dashboard/dtemplate.php',$d);
 	}
@@ -200,7 +211,7 @@ class SimCheck extends CI_Controller {
 			$d['body'] = 'dashboard/olah/_akun-olah.php';
 			$this->load->view('dashboard/dtemplate.php',$d);
 		}else {
-			$error ="You Must Login First To Access The Pages";
+			$error ="You Must Login First To Access This Features";
 			$this->session->set_flashdata('info',error_message($error));
 			redirect(site_url('SimCheck/login'));
 		}
@@ -357,17 +368,17 @@ class SimCheck extends CI_Controller {
 		
 		$this->CosimModel->update_batch_idf($idfUpdate);
 
-		$d['outputTerm'] = $this->CosimModel->titleTermSelectA();
+		echo "success1";
+		/*$d['outputTerm'] = $this->CosimModel->titleTermSelectA();
 		$d['datatable'] = '<script src="'.asset_url().'/app/custom/general/crud/metronic-datatable/base/html-table.js" type="text/javascript"></script>';
 		$d['body'] = 'dashboard/olah/_dataset-title--first.php'; 
-		$this->load->view('dashboard/dtemplate.php',$d);
+		$this->load->view('dashboard/dtemplate.php',$d);*/
 
 	}
 
 	public function vector_process(){
 		$this->db->query("TRUNCATE table sc_title_vector");
 		$j1 = $this->CosimModel->list_penelitian_seluruh();
-
 		foreach ($j1 as $j1) {
 			$docid = $j1->no;
 
@@ -385,11 +396,11 @@ class SimCheck extends CI_Controller {
 			$v['yvector'] 	= $yVectorR3;
 			$this->CosimModel->insert_vector($v);
 		}
-
-		$d['outputTerm'] = $this->CosimModel->titleVectorSelectA();
+		echo "success2";
+		/*$d['outputTerm'] = $this->CosimModel->titleVectorSelectA();
 		$d['datatable'] = '<script src="'.asset_url().'/app/custom/general/crud/metronic-datatable/base/html-table.js" type="text/javascript"></script>';
 		$d['body'] = 'dashboard/olah/_dataset-title--second.php'; 
-		$this->load->view('dashboard/dtemplate.php',$d);
+		$this->load->view('dashboard/dtemplate.php',$d);*/
 
 	}
 

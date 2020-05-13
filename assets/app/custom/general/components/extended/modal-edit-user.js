@@ -98,7 +98,7 @@ var AlertAdd = function() {
                             $("#btn-aclose")[0].click();
                         }, 1100);
                     }else{
-                        toastr.error('Failed to Update !<br> Password might be wrong or Photo Size is too big');
+                        toastr.error('Error occured!<br> There is something wrong, Please Try Again');
                     }
 
                 }
@@ -171,10 +171,10 @@ var KTToastrDemo = function() {
                     if (response == "success") {
                         toastr.success('Account Succesfully Updated!');
                         setTimeout(function() {
-						    location.reload();
+						    window.location.href = "https://localhost/simchecker/Dosection/list_user";
 						}, 1800);
                     }else{
-                        toastr.error('Failed to Update !<br> Password might be wrong or Photo Size is too big');
+                        toastr.error('Error occured!<br> There is something wrong, Please Try Again');
                     }
 
                 }
@@ -239,7 +239,7 @@ var Alert = function() {
 						}, 1100);
 
                     }else{
-                        toastr.error('Failed to Update !<br> Password might be wrong or Photo Size is too big');
+                        toastr.error('Error occured!<br> There is something wrong, Please Try Again');
                     }
 
                 }
@@ -298,10 +298,10 @@ var AlertDelete = function() {
                     if (response == "success") {
                         toastr.success('Account Succesfully Removed!');
                         setTimeout(function() {
-						    location.reload();
+						    window.location.href = "https://localhost/simchecker/Dosection/list_user";
 						}, 1800);
                     }else{
-                        toastr.error('Failed to Update !<br> Password might be wrong or Photo Size is too big');
+                        toastr.error('Error occured!<br> There is something wrong, Please Try Again');
                     }
 
                 }
@@ -361,10 +361,10 @@ var AlertRole = function() {
                     if (response == "success") {
                         toastr.success('Account Succesfully Updated!');
                         setTimeout(function() {
-						    location.reload();
-						}, 1100);
+						    window.location.href = "https://localhost/simchecker/Dosection/list_user";
+						}, 1800);
                     }else{
-                        toastr.error('Failed to Update !<br> Password might be wrong or Photo Size is too big');
+                        toastr.error('Error occured!<br> There is something wrong, Please Try Again');
                     }
 
                 }

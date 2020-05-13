@@ -51,7 +51,7 @@ var KTDatatableAutoColumnHideDemo = function() {
 					autoHide: false,
 					width: 100,
 				}, {
-					field: 'Finished on',
+					field: 'Date Completed',
 					type: 'date',
 					format: 'DD-MM-YYYY',
 					width: 130,

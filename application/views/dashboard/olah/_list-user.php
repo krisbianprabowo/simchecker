@@ -5,10 +5,16 @@
 							<div class="kt-portlet__head">
 								<div class="kt-portlet__head-label">
 									<span class="kt-portlet__head-icon">
-										<i class="la la-users h2 text-primary"></i>
+										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--danger" style="width: 31px !important;height: 31px !important">
+										    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+										        <polygon id="Shape" points="0 0 24 0 24 24 0 24"/>
+										        <path d="M18,14 C16.3431458,14 15,12.6568542 15,11 C15,9.34314575 16.3431458,8 18,8 C19.6568542,8 21,9.34314575 21,11 C21,12.6568542 19.6568542,14 18,14 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" id="Combined-Shape" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+										        <path d="M17.6011961,15.0006174 C21.0077043,15.0378534 23.7891749,16.7601418 23.9984937,20.4 C24.0069246,20.5466056 23.9984937,21 23.4559499,21 L19.6,21 C19.6,18.7490654 18.8562935,16.6718327 17.6011961,15.0006174 Z M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" id="Combined-Shape" fill="#000000" fill-rule="nonzero"/>
+										    </g>
+										</svg>
 									</span>
 									<h3 class="kt-portlet__head-title">
-										Research List
+										User List
 									</h3>
 								</div>
 							</div>
@@ -31,7 +37,7 @@
 												<div class="col-md-6 order-2 order-xl-1 kt-align-right">
 													<div class="row align-items-center">
 														<div class="col-md-12 kt-margin-b-20-mobile">
-															<div class="kt-input-icon kt-input-icon--left">
+															<div class="kt-input-icon kt-input-icon--left" data-step="1" data-intro="Box ini dapat digunakan untuk mencari data pengguna/user dengan memasukkan keyword sesuai yang diinginkan seperti nama, nim, niy, dll.">
 																<input type="text" class="form-control search-input" placeholder="Search..." id="generalSearch">
 																<span class="kt-input-icon__icon kt-input-icon__icon--left">
 																	<span><i class="la la-search"></i></span>
@@ -41,7 +47,8 @@
 													</div>
 												</div>
 												<div class="col-md-4 order-2 order-xl-1">
-													<div class="kt-form__group kt-form__group--inline">
+													<div class="kt-form__group kt-form__group--inline" data-step="2" data-intro="Anda dapat menyortir status pengguna dari nav-menu ini.
+													Contoh: Mahasiswa">
 														<div class="kt-form__label">
 															<label>Status:</label>
 														</div>
@@ -58,7 +65,7 @@
 												</div>
 												<div class="col-md-2 order-2 order-xl-1 kt-align-right">
 													<div class="kt-margin-t-15-mobile"></div>
-													<div class="dropdown dropdown-inline">
+													<div class="dropdown dropdown-inline"  data-step="3" data-intro="Click <b>Button</b> ini untuk menambahkan data pengguna baru.">
 														<button href="#" class="btn btn-brand btn-pill btn-elevate btn-icon-sm" data-toggle="modal" data-target="#kt_modal_8" id="clickMe">
 															<i class="fa fa-plus"></i>
 														Add User
@@ -73,9 +80,9 @@
 									</div>
 
 									<div class="kt-portlet__body kt-portlet__body--fit">
-										<span class="text-danger text-bold font-weight-bold">*Tabel Akan Diperbarui Setelah Halaman Ini Direfresh!</span>
+										<span class="text-danger text-bold font-weight-bold">*Table will be updated after you refresh the page!</span>
 										<!--begin: Datatable -->
-										<table class="kt-datatable table-hover responsive no-wrap user-tables" id="auto_column_hide" width="100%">
+										<table class="kt-datatable table-hover responsive no-wrap user-tables" id="auto_column_hide" width="100%" data-step="4" data-intro="Untuk mengelola data pengguna<br>: 1. Click <b>Button</b> warna <span style='color:#59A2FC'>BIRU</span> => mengubah(mengedit) data pengguna;<br> 2. Click <b>Button</b> warna <span style='color:#1DC9B7'>HIJAU</span> => mengubah status pengguna(misal dari dosen menjadi koordinator TA);<br> 3. Click <b>Button</b> warna <span style='color:#FA0C52'>MERAH</span> => menghapus data pengguna;">
 											<thead>
 												<tr>
 													<th title="Field #2">ID User (NIY/NIP/NIM)</th>
@@ -114,7 +121,7 @@
 																</button>
 																<button class="btn btn-label-success btn-pill btn-sm btn-icon" id_user-target="<?php echo $u->id_user ?>" role-target="<?php echo $role?>" id="btn-status" title="Change Status" data-toggle="modal" data-target="#kt_modal_6"><i class="la la-refresh"></i>
 																</button>
-																<button class="btn btn-label-danger btn-pill btn-sm btn-icon btn-icon-md" type="button" id="btn-delete"  nama-target="<?php echo $nama?>" role-target="<?php echo $role?>" id_user-target="<?php echo $u->id_user ?>" id="btn-delete"title="Delete"  data-toggle="modal" data-target="#kt_modal_7">
+																<button class="btn btn-label-danger btn-pill btn-sm btn-icon btn-icon-md" type="button" id="btn-delete"  nama-target="<?php echo $nama?>" role-target="<?php echo $role?>" id_user-target="<?php echo $u->id_user ?>" id="btn-delete" title="Delete"  data-toggle="modal" data-target="#kt_modal_7">
 																	<i class="la la-trash"></i>
 																</button>
 															</div>

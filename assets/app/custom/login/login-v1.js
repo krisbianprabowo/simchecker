@@ -29,7 +29,7 @@ var Alert = function() {
 		                    showConfirmButton: false
 	                  	})
 	                  	.then (function() {
-	                    	window.location.href = "https://localhost/simchecker/SimCheck/dashboard";
+	                    	window.location.href = "https://localhost/simchecker/SimCheck/dshbrd_dsn";
 	                  	});
 	                } else {
 

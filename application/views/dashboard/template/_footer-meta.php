@@ -99,13 +99,16 @@
 		<script src="<?php echo asset_url()?>/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
 		<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM" type="text/javascript"></script>
 		<script src="<?php echo asset_url()?>/vendors/custom/gmaps/gmaps.js" type="text/javascript"></script>
-
+		<script src="<?php echo asset_url()?>/introjs/intro.js"></script>
 		<!--end::Page Vendors -->
 
 		<!--begin::Page Scripts(used by this page) -->
 		<script src="<?php echo asset_url()?>/app/custom/general/dashboard.js" type="text/javascript"></script>
 		<?php if(isset($datatable)) {
 			echo $datatable;}
+		?>
+		<?php if(isset($guidetips)) {
+			echo $guidetips;}
 		?>
 		<!--end::Page Scripts -->
 

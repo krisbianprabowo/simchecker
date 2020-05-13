@@ -11,17 +11,17 @@
 												<h4 class="kt-menu__section-text text-success">Research</h4>
 												<i class="kt-menu__section-icon flaticon-more-v2"></i>
 											</li>
-											<li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-plus"></i><span class="kt-menu__link-text text-danger">Add Research</span></a></li>
-											<li class="kt-menu__item " aria-haspopup="true"><a href="<?php echo site_url('SimCheck/list_penelitian_o')?>" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-th-list"></i><span class="kt-menu__link-text text-danger">Research List</span></a></li>
+											<li class="kt-menu__item " aria-haspopup="true"><a href="<?php echo site_url('Dosection/list_penelitian_o?modal=true')?>" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-plus"></i><span class="kt-menu__link-text text-danger">Add Research</span></a></li>
+											<li class="kt-menu__item " aria-haspopup="true"><a href="<?php echo site_url('Dosection/list_penelitian_o')?>" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-th-list"></i><span class="kt-menu__link-text text-danger">Research List</span></a></li>
 											<li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-cloud-download-alt"></i><span class="kt-menu__link-text text-danger">Export Data</span></a></li>
 											<li class="kt-menu__item " aria-haspopup="true"><a href="<?php echo site_url('SimCheck/generate_dataset')?>" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-file-medical-alt"></i><span class="kt-menu__link-text text-danger">Generate New Dataset</span></a></li>
-											<li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-pen-nib"></i><span class="kt-menu__link-text">Offer A Research</span></a></li>
+											<li class="kt-menu__item " aria-haspopup="true"><a href="<?php echo site_url('Dosection/add_tawaran')?>" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-pen-nib"></i><span class="kt-menu__link-text">Offer A Research</span></a></li>
 											<li class="kt-menu__section ">
 												<h4 class="kt-menu__section-text text-warning">Users</h4>
 												<i class="kt-menu__section-icon flaticon-more-v2"></i>
 											</li>
-											<li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-user-plus"></i><span class="kt-menu__link-text text-danger">Add User</span></a></li>
-											<li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-user-friends"></i><span class="kt-menu__link-text">User List</span></a></li>
+											<li class="kt-menu__item " aria-haspopup="true"><a href="<?php echo site_url('Dosection/list_user?modal=true')?>" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-user-plus"></i><span class="kt-menu__link-text text-danger">Add User</span></a></li>
+											<li class="kt-menu__item " aria-haspopup="true"><a href="<?php echo site_url('Dosection/list_user')?>" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-user-friends"></i><span class="kt-menu__link-text">User List</span></a></li>
 										</ul>
 									</div>
 								</div>

@@ -65,6 +65,7 @@
 
 		<!--begin::Global Theme Styles(used by all pages) -->
 		<link href="<?php echo asset_url()?>/demo/demo9/base/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="<?php echo asset_url()?>/introjs/introjs.css">
 
 		<!--end::Global Theme Styles -->
 

@@ -87,7 +87,7 @@
                         <div class="col-sm-3 col-sm-3 d-none d-lg-block">
                             <div class="log_chat_area d-flex">
                                 <div class="live_chat_btn">
-                                    <a class="boxed_btn_orange" href="<?php echo site_url('SimCheck/login')?>"  data-step="2" data-intro="This is a tooltip!">
+                                    <a class="boxed_btn_orange" href="<?php echo site_url('SimCheck/login')?>" style="padding:10px 22px"  data-step="2" data-intro="This is a tooltip!">
                                         <span style="font-family: Poppins, sans-serif;">LOGIN</span>
                                     </a>
                                 </div>
@@ -111,7 +111,7 @@
                 <div class="row align-items-center justify-content-center ">
                     <div class="col-xl-6 col-md-6">
                         <div class="slider_info">
-                            <h3 class="text-focus" style="color:#384AD7; font-family: Comfortaa, sans-serif !important; padding-top:2em;"  data-step="1" data-intro="This is a tooltip!">English Literature <br>
+                            <h3 class="text-focus" style="color:#384AD7; font-family: Comfortaa !important; padding-top:2em;"  data-step="1" data-intro="This is a tooltip!">English Literature <br>
                                 Undergraduate<br>
                                 Program ~</h3>
                             <a href="<?php echo site_url('SimCheck/login')?>" style="font-family: Poppins, sans-serif;" class="boxed_btn">GET STARTED</a>
@@ -135,11 +135,6 @@
     <script src="<?php echo asset_url()?>/vendors/general/jquery/dist/jquery.slicknav.min.js" type="text/javascript"></script>
     <script src="<?php echo asset_url()?>/vendors/general/jquery/dist/main.js" type="text/javascript"></script>
     <script src="<?php echo asset_url()?>/introjs/intro.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            introJs().start();
-        });
-    </script>
     <?php if (!empty($_GET['logout'])){
             if ($_GET['logout']=='success' and !empty($_SESSION['outlog'])){ ?>
                 <script>
